@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part of Me | 障害者アートの会社</title>
+  <meta name="description" content="障害者アーティストの才能と創造性を世界へ発信する会社です。">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <!-- ローディングアニメーション -->
+  <div id="loading-animation" class="loading-screen">
+    <img src="images/partofme_logo_tagline_black.jpg" alt="会社ロゴ" class="animate-pulse">
+  </div>
+
+  <!-- ヘッダー -->
+  <header id="header" class="header">
+    <div class="header-container">
+      <div class="header-content">
+        <!-- ロゴ -->
+        <a href="index.html" class="logo">
+          <img id="header-logo" src="images/partofme_logo_tagline_white.jpg" alt="Part of Me ロゴ">
+        </a>
+
+        <!-- デスクトップナビゲーション -->
+        <div class="desktop-nav">
+          <button class="nav-link" data-section="about">About</button>
+          <button class="nav-link" data-section="product">Product</button>
+          <button class="nav-link" data-section="news">News</button>
+          <button class="nav-link" data-section="gallery">Gallery</button>
+        </div>
+
+        <!-- ヘッダーボタン -->
+        <div class="header-buttons">
+          <a href="store.html" class="header-btn">Store</a>
+          <a href="contact.html" class="header-btn">Contact</a>
+        </div>
+
+        <!-- モバイルメニューボタン -->
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- モバイルメニュー -->
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-content">
+      <button class="mobile-menu-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <nav class="mobile-nav">
+        <button class="mobile-nav-link" data-section="about">About</button>
+        <button class="mobile-nav-link" data-section="product">Product</button>
+        <button class="mobile-nav-link" data-section="news">News</button>
+        <button class="mobile-nav-link" data-section="gallery">Gallery</button>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <!-- ヒーロースライダー -->
+    <section id="hero" class="hero-slider">
+      <div class="hero-slides">
+        <div class="hero-slide active">
+          <img src="images/top1.jpg" alt="色彩の世界 by 山田太郎">
+          <div class="slide-info">
+            <p>『色彩の世界』 artist : 山田太郎 atelier : アートスタジオ彩</p>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="images/top2.jpg" alt="眼鏡の少年 by 佐藤花子">
+          <div class="slide-info">
+            <p>『眼鏡の少年』 artist : 佐藤花子 atelier : クリエイティブハウス</p>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="images/top3.jpg" alt="光と影の交差 by 鈴木一郎">
+          <div class="slide-info">
+            <p>『光と影の交差』 artist : 鈴木一郎 atelier : アトリエ光</p>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="images/top4.jpg" alt="三色の抽象 by 高橋誠">
+          <div class="slide-info">
+            <p>『三色の抽象』 artist : 高橋誠 atelier : アートファクトリー</p>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="images/top5.jpg" alt="日常の風景 by 中村洋子">
+          <div class="slide-info">
+            <p>『日常の風景』 artist : 中村洋子 atelier : 創作工房まる</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- コンセプトセクション -->
+    <section id="concept" class="concept-section">
+      <div class="container">
+        <div class="concept-content">
+          <div class="concept-text">
+            <div class="concept-paragraph">
+              <p>障がい者だから。</p>
+              <p>この言葉に続くのは、きめつけや偏見かもしれない。<br>悪意がなくても、見えない壁ができてしまう。</p>
+            </div>
+
+            <div class="concept-paragraph">
+              <p>その壁を、乗り越えるのは大変だし、時間がかかる。<br>ぶっこわしてしまうのも、なんだか平和じゃない。</p>
+            </div>
+
+            <div class="concept-paragraph">
+              <p>ならばその壁に、おおきな絵をかいてしまおう。<br>障がい者アートとは、そんなチャレンジだと思う。</p>
+            </div>
+
+            <div class="concept-paragraph">
+              <p>彼らの絵は、この世界はもっと自由だよ。と教えてくれる。<br>彼らには、アートでこの世界を塗り替える力がある。</p>
+            </div>
+
+            <div class="concept-paragraph">
+              <p>わたしたちは、ほんの一部でも、彼らの力になりたい。</p>
+            </div>
+
+            <div class="concept-footer">
+              <h2>世界を塗り替える人のそばに。</h2>
+              <img src="images/partofme_logo_black.jpg" alt="Part of Me ロゴ">
+            </div>
+          </div>
+
+          <div class="concept-images">
+            <div class="concept-image image-1">
+              <img src="images/top1.jpg" alt="アート1">
+            </div>
+            <div class="concept-image image-2">
+              <img src="images/top5.jpg" alt="アート2">
+            </div>
+            <div class="concept-image image-3">
+              <img src="images/top2.jpg" alt="アート3">
+            </div>
+            <div class="concept-image image-4">
+              <img src="images/top3.jpg" alt="アート4">
+            </div>
+            <div class="concept-image image-5">
+              <img src="images/top4.jpg" alt="アート5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aboutセクション -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>私たちについて <span class="accent">-About</span></h2>
+          <p class="section-tagline">塗り替える人と、<br>塗り替えたい人を繋ぐ。</p>
+        </div>
+
+        <div class="about-image">
+          <img src="images/about.png" alt="私たちの活動内容">
+        </div>
+      </div>
+    </section>
+
+    <!-- Productセクション -->
+    <section id="product" class="product-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>おすすめ商品 <span class="accent">-Product</span></h2>
+          <p class="section-tagline">日常の一部を<br>アートで塗り替える。</p>
+        </div>
+
+        <div class="product-content">
+          <div class="product-image-container">
+            <div class="sauna-hat-container">
+              <img src="images/saunahat_black.jpg" alt="黒のサウナハット" class="front">
+              <img src="images/saunahat_art.jpg" alt="アート入りのサウナハット" class="back">
+            </div>
+            <div class="tap-hint">
+              <img src="images/finger_lefthand.png" alt="左手">
+              <span>サウナハットをタップ</span>
+              <img src="images/finger_righthand.png" alt="右手">
+            </div>
+          </div>
+
+          <div class="product-info">
+            <p>障がい者アーティスト山田太郎氏の鮮やかな色彩のアートをプリントしたサウナハット。耐熱性と快適さを兼ね備え、サウナでの時間をより特別なものにします。</p>
+            <a href="store.html" class="product-link">詳しくはこちら</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsセクション -->
+    <section id="news" class="news-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>最近の取り組み <span class="accent">-News</span></h2>
+          <p class="section-tagline">いつも進化しています。</p>
+        </div>
+
+        <div class="news-grid">
+          <!-- ニュース記事 -->
+          <div class="news-item" data-id="1">
+            <div class="news-image">
+              <img src="images/top1.jpg" alt="新商品発売のお知らせ">
+            </div>
+            <div class="news-content">
+              <h3>新商品発売のお知らせ</h3>
+              <p class="news-date">2023.12.15</p>
+              <p class="news-summary">障がい者アーティスト5名の作品をデザインに取り入れた新商品ラインナップを発表しました。</p>
+            </div>
+          </div>
+
+          <div class="news-item" data-id="2">
+            <div class="news-image">
+              <img src="images/top2.jpg" alt="展示会開催のお知らせ">
+            </div>
+            <div class="news-content">
+              <h3>展示会開催のお知らせ</h3>
+              <p class="news-date">2023.11.20</p>
+              <p class="news-summary">東京・大阪・福岡の3都市で「障がい者アート展2023」を開催します。</p>
+            </div>
+          </div>
+
+          <div class="news-item" data-id="3">
+            <div class="news-image">
+              <img src="images/top3.jpg" alt="コラボレーション商品発売">
+            </div>
+            <div class="news-content">
+              <h3>コラボレーション商品発売</h3>
+              <p class="news-date">2023.10.05</p>
+              <p class="news-summary">国内大手アパレルブランドとのコラボレーションによる限定Tシャツが発売されました。</p>
+            </div>
+          </div>
+
+          <div class="news-item" data-id="4">
+            <div class="news-image">
+              <img src="images/top4.jpg" alt="アートワークショップ開催">
+            </div>
+            <div class="news-content">
+              <h3>アートワークショップ開催</h3>
+              <p class="news-date">2023.09.10</p>
+              <p class="news-summary">障がい者アーティストによるワークショップを全国5都市で開催します。</p>
+            </div>
+          </div>
+
+          <div class="news-item" data-id="5">
+            <div class="news-image">
+              <img src="images/top5.jpg" alt="新規アーティスト募集">
+            </div>
+            <div class="news-content">
+              <h3>新規アーティスト募集</h3>
+              <p class="news-date">2023.08.20</p>
+              <p class="news-summary">Part of Meでは、新たに活動を共にする障がい者アーティストを募集しています。</p>
+            </div>
+          </div>
+
+          <div class="news-item" data-id="6">
+            <div class="news-image">
+              <img src="images/top1.jpg" alt="海外展示会参加決定">
+            </div>
+            <div class="news-content">
+              <h3>海外展示会参加決定</h3>
+              <p class="news-date">2023.07.15</p>
+              <p class="news-summary">ニューヨークで開催される国際障がい者アート展に、Part of Meのアーティスト3名が招待されました。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ギャラリーセクション -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>作品と作家たち <span class="accent">-Gallery</span></h2>
+          <p class="section-tagline">美術館にもない作品を<br>ご覧ください。</p>
+        </div>
+
+        <!-- モバイル用スワイプカルーセル -->
+        <div class="gallery-mobile">
+          <div class="gallery-carousel">
+            <div class="gallery-slide active">
+              <img src="images/top1.jpg" alt="色彩の世界 - 山田太郎作">
+              <p class="artwork-title">色彩の世界</p>
+              <button class="view-artist-btn" data-artist="1">
+                <i class="fas fa-info-circle"></i>
+                アーティストを見る
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <img src="images/top2.jpg" alt="眼鏡の少年 - 佐藤花子作">
+              <p class="artwork-title">眼鏡の少年</p>
+              <button class="view-artist-btn" data-artist="2">
+                <i class="fas fa-info-circle"></i>
+                アーティストを見る
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <img src="images/top3.jpg" alt="光と影の交差 - 鈴木一郎作">
+              <p class="artwork-title">光と影の交差</p>
+              <button class="view-artist-btn" data-artist="3">
+                <i class="fas fa-info-circle"></i>
+                アーティストを見る
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <img src="images/top4.jpg" alt="日常の風景 - 中村洋子作">
+              <p class="artwork-title">日常の風景</p>
+              <button class="view-artist-btn" data-artist="4">
+                <i class="fas fa-info-circle"></i>
+                アーティストを見る
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <img src="images/top5.jpg" alt="抽象的な感情 - 田中誠作">
+              <p class="artwork-title">抽象的な感情</p>
+              <button class="view-artist-btn" data-artist="5">
+                <i class="fas fa-info-circle"></i>
+                アーティストを見る
+              </button>
+            </div>
+          </div>
+          <div class="gallery-indicators">
+            <span class="gallery-indicator active"></span>
+            <span class="gallery-indicator"></span>
+            <span class="gallery-indicator"></span>
+            <span class="gallery-indicator"></span>
+            <span class="gallery-indicator"></span>
+          </div>
+        </div>
+
+        <!-- デスクトップ用グリッド表示 -->
+        <div class="gallery-desktop">
+          <div class="gallery-grid">
+            <div class="gallery-item large" data-artist="1">
+              <div class="gallery-image">
+                <img src="images/top1.jpg" alt="色彩の世界 - 山田太郎作">
+                <div class="gallery-hover">
+                  <p>アーティストを<br>見る</p>
+                </div>
+              </div>
+              <p class="artwork-title">色彩の世界</p>
+            </div>
+
+            <div class="gallery-item medium" data-artist="2">
+              <div class="gallery-image">
+                <img src="images/top2.jpg" alt="眼鏡の少年 - 佐藤花子作">
+                <div class="gallery-hover">
+                  <p>アーティストを<br>見る</p>
+                </div>
+              </div>
+              <p class="artwork-title">眼鏡の少年</p>
+            </div>
+
+            <div class="gallery-item large" data-artist="3">
+              <div class="gallery-image">
+                <img src="images/top3.jpg" alt="光と影の交差 - 鈴木一郎作">
+                <div class="gallery-hover">
+                  <p>アーティストを<br>見る</p>
+                </div>
+              </div>
+              <p class="artwork-title">光と影の交差</p>
+            </div>
+
+            <div class="gallery-item small" data-artist="4">
+              <div class="gallery-image">
+                <img src="images/top4.jpg" alt="日常の風景 - 中村洋子作">
+                <div class="gallery-hover">
+                  <p>アーティストを<br>見る</p>
+                </div>
+              </div>
+              <p class="artwork-title">日常の風景</p>
+            </div>
+
+            <div class="gallery-item medium" data-artist="5">
+              <div class="gallery-image">
+                <img src="images/top5.jpg" alt="抽象的な感情 - 田中誠作">
+                <div class="gallery-hover">
+                  <p>アーティストを<br>見る</p>
+                </div>
+              </div>
+              <p class="artwork-title">抽象的な感情</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/partofme_logo_tagline_black.jpg" alt="Part of Me ロゴ">
+        </div>
+
+        <div class="footer-social">
+          <a href="https://www.instagram.com/partofme_official/" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fab fa-instagram"></i>
+            <span class="sr-only">Instagram</span>
+          </a>
+          <a href="https://x.com/pom_support" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fab fa-x-twitter"></i>
+            <span class="sr-only">X (Twitter)</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; <span id="current-year"></span> Part of Me. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- モーダル -->
+  <!-- ニュース詳細モーダル -->
+  <div id="news-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <h2 id="news-modal-title"></h2>
+        <p id="news-modal-date" class="modal-date"></p>
+      </div>
+      <div class="modal-body">
+        <div id="news-modal-image" class="modal-image"></div>
+        <div id="news-modal-content" class="modal-text"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- アーティスト詳細モーダル -->
+  <div id="artist-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <h2 id="artist-modal-name"></h2>
+      </div>
+      <div class="modal-body artist-modal-body">
+        <div id="artist-modal-portrait" class="modal-image"></div>
+        <div class="artist-info">
+          <h3>アーティストプロフィール</h3>
+          <p id="artist-modal-bio"></p>
+          
+          <div class="artist-themes">
+            <h4>作品テーマ</h4>
+            <div class="theme-tags">
+              <span class="theme-tag">抽象画</span>
+              <span class="theme-tag">色彩</span>
+              <span class="theme-tag">感情表現</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
