@@ -26,7 +26,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -225,20 +225,27 @@ body {
   opacity: 0.7;
 }
 
-/* Hero Slider */
+/* Hero Section */
 .hero-slider {
   position: relative;
+  width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 84px; /* ヘッダー分のパディング */
+}
+
+/* スライダーコンテナ - スマホ版 */
+.slider-container {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+  background-color: #f5efe5;
   overflow: hidden;
 }
 
-.hero-slides {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.hero-slide {
+/* スライダー画像 */
+.slider-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -246,28 +253,93 @@ body {
   height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-}
-
-.hero-slide.active {
-  opacity: 1;
   z-index: 1;
 }
 
-.hero-slide img {
+.slider-image.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slider-image.transitioning {
+  opacity: 0;
+}
+
+.slider-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 
-.slide-info {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+/* モバイル用作品情報 */
+.mobile-info-container {
   background-color: rgba(255, 255, 255, 0.7);
-  padding: 10px 15px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 80px;
+}
+
+.mobile-info {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.mobile-info.active {
+  opacity: 1;
+}
+
+.mobile-info.transitioning {
+  opacity: 0;
+}
+
+.mobile-info .artwork-title {
+  font-weight: 500;
   font-size: 14px;
-  line-height: 1.4;
+  color: black;
+  margin-bottom: 4px;
+}
+
+.mobile-info .artist-name,
+.mobile-info .atelier-name {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 4px;
+}
+
+.mobile-info .atelier-name {
+  margin-bottom: 0;
+}
+
+/* デスクトップ用作品情報 - スマホでは非表示 */
+.desktop-info-container {
+  display: none;
+}
+
+/* CSSアニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /* Concept Section */
@@ -276,6 +348,8 @@ body {
   min-height: 100vh;
   background-color: white;
   padding: 60px 0;
+  display: flex;
+  align-items: center;
 }
 
 .concept-content {
@@ -287,13 +361,19 @@ body {
 .concept-text {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .concept-paragraph {
   font-weight: 700;
-  font-size: 14px;
+  font-size: clamp(22px, 1.2vw, 25px);
   line-height: 1.6;
+}
+
+.concept-first-row {
+  margin-bottom: 10px;
 }
 
 .concept-footer {
@@ -303,24 +383,26 @@ body {
 }
 
 .concept-footer h2 {
-  font-size: 18px;
+  font-size: clamp(10px, 4vw,30px);
   font-weight: 700;
   margin-right: 15px;
 }
 
 .concept-footer img {
-  width: 80px;
+  width: clamp(120px, 140px, 200px);
 }
 
 .concept-images {
   position: relative;
-  height: 700px;
+  width: clamp(400px, 50vw, 600px);
+  margin: 0 auto;
+  aspect-ratio: 1 / 1.1;
 }
 
 .concept-image {
   position: absolute;
   background-color: white;
-  padding: 8px;
+  padding: 7px;
   overflow: hidden;
 }
 
@@ -334,36 +416,36 @@ body {
 .image-1 {
   top: 0;
   left: 0;
-  width: 40%;
-  height: 35%;
+  width: 45%;
+  height: auto;
 }
 
 .image-2 {
   top: 5%;
   right: 0;
   width: 30%;
-  height: 40%;
+  height: auto;
 }
 
 .image-3 {
   top: 20%;
   left: 25%;
   width: 50%;
-  height: 60%;
+  height: auto;
 }
 
 .image-4 {
-  bottom: 5%;
+  bottom: 0;
   left: 5%;
-  width: 30%;
-  height: 35%;
+  width: 40%;
+  height: auto;
 }
 
 .image-5 {
-  bottom: 10%;
-  right: 10%;
-  width: 25%;
-  height: 30%;
+  bottom: 5%;
+  right: 5%;
+  width: 30%;
+  height: auto;
 }
 
 /* Section Headers */
@@ -421,53 +503,37 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin-top: 50px;
-}
-
-.product-image-container {
-  position: relative;
-  width: 300px;
-  height: 300px;
+  padding-top: 60px;
 }
 
 .sauna-hat-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 300px;
+  height: 340px;
   cursor: pointer;
 }
 
-.sauna-hat-container img {
+.mask {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-.sauna-hat-container .front {
+  overflow: hidden;
   z-index: 2;
-  mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-  transition: mask-image 1.5s linear, -webkit-mask-image 1.5s linear;
 }
 
-.sauna-hat-container .front.hidden {
-  mask-image: linear-gradient(to bottom, transparent 0%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 100%);
-}
-
-.sauna-hat-container .back {
-  z-index: 1;
+.front-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .tap-hint {
   position: absolute;
-  top: -40px;
+  top: -50px;
   left: 0;
   right: 0;
   display: flex;
@@ -1124,10 +1190,9 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 50%;
+  border-radius: var(--border-radius);
   overflow: hidden;
   background-color: white;
-  box-shadow: var(--shadow);
 }
 
 .back {
@@ -1618,29 +1683,64 @@ body {
     display: none;
   }
 
-  .concept-content {
+  .hero-slider {
+    padding-top: 0;
     flex-direction: row;
+  }
+
+  .slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  /* モバイル用情報を非表示 */
+  .mobile-info-container {
+    display: none;
+  }
+
+  /* デスクトップ用情報を表示 */
+  .desktop-info-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    display: block;
+  }
+
+  .desktop-info {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 8px 12px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    white-space: nowrap;
+  }
+
+  .desktop-info.active {
+    opacity: 1;
+  }
+
+  .desktop-info.transitioning {
+    opacity: 0;
+  }
+
+  .info-text {
+    font-size: 12px;
+    color: black;
+    font-family: serif;
+    display: flex;
     align-items: center;
+    gap: 12px;
   }
 
-  .concept-text {
-    width: 50%;
-  }
-
-  .concept-images {
-    width: 50%;
-  }
-
-  .concept-paragraph {
-    font-size: 16px;
-  }
-
-  .concept-footer h2 {
-    font-size: 24px;
-  }
-
-  .concept-footer img {
-    width: 130px;
+  .info-text .artwork-title {
+    font-weight: 500;
   }
 
   .section-header h2 {
@@ -1653,7 +1753,8 @@ body {
 
   .product-content {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    gap: 100px;
   }
 
   .news-grid {
@@ -1712,6 +1813,35 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .desktop-info {
+    padding: 12px 18px;
+  }
+
+  .info-text {
+    font-size: 14px;
+    gap: 16px;
+  }
+
+  .concept-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .concept-text {
+    width: 50%;
+  }
+
+  .concept-images {
+    height: auto;
+    width: 50%;
+  }
+
+  .concept-paragraph {
+    font-weight: 700;
+    font-size: clamp(12px, 1.4vw, 30px);
+    line-height: 1.6;
+  }
+
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1726,5 +1856,28 @@ body {
 
   .product-details {
     width: 100%;
+  }
+}
+
+/* 超大画面用スタイル */
+@media (min-width: 1280px) {
+  .desktop-info {
+    padding: 16px 24px;
+  }
+
+  .info-text {
+    font-size: 16px;
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .desktop-info {
+    padding: 20px 32px;
+  }
+
+  .info-text {
+    font-size: 18px;
+    gap: 32px;
   }
 }

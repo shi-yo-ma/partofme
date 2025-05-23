@@ -65,41 +65,96 @@
   </div>
 
   <main>
-    <!-- ヒーロースライダー -->
-    <section id="hero" class="hero-slider">
-      <div class="hero-slides">
-        <div class="hero-slide active">
+    
+    <!-- ファーストビュー（HeroSlider） -->
+    <div class="hero-slider">
+      <!-- スライダー画像 -->
+      <div class="slider-container">
+        <div class="slider-image active" data-index="0">
           <img src="images/top1.jpg" alt="色彩の世界 by 山田太郎">
-          <div class="slide-info">
-            <p>『色彩の世界』 artist : 山田太郎 atelier : アートスタジオ彩</p>
-          </div>
         </div>
-        <div class="hero-slide">
+        <div class="slider-image" data-index="1">
           <img src="images/top2.jpg" alt="眼鏡の少年 by 佐藤花子">
-          <div class="slide-info">
-            <p>『眼鏡の少年』 artist : 佐藤花子 atelier : クリエイティブハウス</p>
-          </div>
         </div>
-        <div class="hero-slide">
+        <div class="slider-image" data-index="2">
           <img src="images/top3.jpg" alt="光と影の交差 by 鈴木一郎">
-          <div class="slide-info">
-            <p>『光と影の交差』 artist : 鈴木一郎 atelier : アトリエ光</p>
-          </div>
         </div>
-        <div class="hero-slide">
+        <div class="slider-image" data-index="3">
           <img src="images/top4.jpg" alt="三色の抽象 by 高橋誠">
-          <div class="slide-info">
-            <p>『三色の抽象』 artist : 高橋誠 atelier : アートファクトリー</p>
-          </div>
         </div>
-        <div class="hero-slide">
+        <div class="slider-image" data-index="4">
           <img src="images/top5.jpg" alt="日常の風景 by 中村洋子">
-          <div class="slide-info">
-            <p>『日常の風景』 artist : 中村洋子 atelier : 創作工房まる</p>
-          </div>
         </div>
       </div>
-    </section>
+
+      <!-- モバイル用作品情報 -->
+      <div class="mobile-info-container">
+        <div class="mobile-info active" data-index="0">
+          <p class="artwork-title">『色彩の世界』</p>
+          <p class="artist-name">artist : 山田太郎</p>
+          <p class="atelier-name">atelier : アートスタジオ彩</p>
+        </div>
+        <div class="mobile-info" data-index="1">
+          <p class="artwork-title">『眼鏡の少年』</p>
+          <p class="artist-name">artist : 佐藤花子</p>
+          <p class="atelier-name">atelier : クリエイティブハウス</p>
+        </div>
+        <div class="mobile-info" data-index="2">
+          <p class="artwork-title">『光と影の交差』</p>
+          <p class="artist-name">artist : 鈴木一郎</p>
+          <p class="atelier-name">atelier : アトリエ光</p>
+        </div>
+        <div class="mobile-info" data-index="3">
+          <p class="artwork-title">『三色の抽象』</p>
+          <p class="artist-name">artist : 高橋誠</p>
+          <p class="atelier-name">atelier : アートファクトリー</p>
+        </div>
+        <div class="mobile-info" data-index="4">
+          <p class="artwork-title">『日常の風景』</p>
+          <p class="artist-name">artist : 中村洋子</p>
+          <p class="atelier-name">atelier : 創作工房まる</p>
+        </div>
+      </div>
+
+      <!-- デスクトップ用作品情報 -->
+      <div class="desktop-info-container">
+        <div class="desktop-info active" data-index="0">
+          <p class="info-text">
+            <span class="artwork-title">『色彩の世界』</span>
+            <span class="artist-name">artist : 山田太郎</span>
+            <span class="atelier-name">atelier : アートスタジオ彩</span>
+          </p>
+        </div>
+        <div class="desktop-info" data-index="1">
+          <p class="info-text">
+            <span class="artwork-title">『眼鏡の少年』</span>
+            <span class="artist-name">artist : 佐藤花子</span>
+            <span class="atelier-name">atelier : クリエイティブハウス</span>
+          </p>
+        </div>
+        <div class="desktop-info" data-index="2">
+          <p class="info-text">
+            <span class="artwork-title">『光と影の交差』</span>
+            <span class="artist-name">artist : 鈴木一郎</span>
+            <span class="atelier-name">atelier : アトリエ光</span>
+          </p>
+        </div>
+        <div class="desktop-info" data-index="3">
+          <p class="info-text">
+            <span class="artwork-title">『三色の抽象』</span>
+            <span class="artist-name">artist : 高橋誠</span>
+            <span class="atelier-name">atelier : アートファクトリー</span>
+          </p>
+        </div>
+        <div class="desktop-info" data-index="4">
+          <p class="info-text">
+            <span class="artwork-title">『日常の風景』</span>
+            <span class="artist-name">artist : 中村洋子</span>
+            <span class="atelier-name">atelier : 創作工房まる</span>
+          </p>
+        </div>
+      </div>
+    </div>
 
     <!-- コンセプトセクション -->
     <section id="concept" class="concept-section">
@@ -107,7 +162,7 @@
         <div class="concept-content">
           <div class="concept-text">
             <div class="concept-paragraph">
-              <p>障がい者だから。</p>
+              <p class="concept-first-row">障がい者だから。</p>
               <p>この言葉に続くのは、きめつけや偏見かもしれない。<br>悪意がなくても、見えない壁ができてしまう。</p>
             </div>
 
@@ -129,25 +184,25 @@
 
             <div class="concept-footer">
               <h2>世界を塗り替える人のそばに。</h2>
-              <img src="images/partofme_logo_black.jpg" alt="Part of Me ロゴ">
+              <img src="images/partofme_logo_black.jpeg" alt="会社ロゴ">
             </div>
           </div>
 
           <div class="concept-images">
             <div class="concept-image image-1">
-              <img src="images/top1.jpg" alt="アート1">
+              <img src="images/concept5.png" alt="コンセプト1">
             </div>
             <div class="concept-image image-2">
-              <img src="images/top5.jpg" alt="アート2">
+              <img src="images/concept2.png" alt="コンセプト2">
             </div>
             <div class="concept-image image-3">
-              <img src="images/top2.jpg" alt="アート3">
+              <img src="images/concept3.png" alt="コンセプト3">
             </div>
             <div class="concept-image image-4">
-              <img src="images/top3.jpg" alt="アート4">
+              <img src="images/concept1.png" alt="コンセプト4">
             </div>
             <div class="concept-image image-5">
-              <img src="images/top4.jpg" alt="アート5">
+              <img src="images/top3.jpg" alt="コンセプト5">
             </div>
           </div>
         </div>
@@ -177,15 +232,15 @@
         </div>
 
         <div class="product-content">
-          <div class="product-image-container">
-            <div class="sauna-hat-container">
-              <img src="images/saunahat_black.jpg" alt="黒のサウナハット" class="front">
-              <img src="images/saunahat_art.jpg" alt="アート入りのサウナハット" class="back">
-            </div>
+          <div class="sauna-hat-container">
             <div class="tap-hint">
               <img src="images/finger_lefthand.png" alt="左手">
               <span>サウナハットをタップ</span>
               <img src="images/finger_righthand.png" alt="右手">
+            </div>
+            <img src="images/saunahat_art.jpg" alt="アート入りのサウナハット" class="back-image">
+            <div class="mask">
+              <img src="images/saunahat_black.jpg" alt="黒のサウナハット" class="front-image">
             </div>
           </div>
 

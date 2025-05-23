@@ -48,7 +48,7 @@ $(document).ready(() => {
       const heroBottom = $(".hero-slider").offset().top + heroHeight
       if (heroBottom - scrollTop <= headerCenter || window.innerWidth < 768) {
         $("#header").addClass("header-white")
-        $("#header-logo").attr("src", "images/partofme_logo_tagline_black.jpg")
+        $("#header-logo").attr("src", "images/partofme_logo_black.jpeg")
       } else {
         $("#header").removeClass("header-white")
         $("#header-logo").attr("src", "images/partofme_logo_tagline_white.jpg")
@@ -56,7 +56,7 @@ $(document).ready(() => {
     } else {
       // 他のページの場合
       $("#header").addClass("header-white")
-      $("#header-logo").attr("src", "images/partofme_logo_tagline_black.jpg")
+      $("#header-logo").attr("src", "images/partofme_logo_black.jpeg")
     }
   }
 
@@ -64,41 +64,127 @@ $(document).ready(() => {
   $(window).resize(updateHeaderStyle)
   updateHeaderStyle()
 
-  // ヒーロースライダー
-  let currentSlide = 0
-  const slides = $(".hero-slide")
-  const totalSlides = slides.length
+  // スライダー
+  // 設定
+  const SLIDE_INTERVAL = 7000; // 7秒
+  const TRANSITION_DURATION = 1000; // 1秒
+  const TOTAL_SLIDES = $('.slider-image').length;
+  
+  let currentIndex = 0;
+  let isTransitioning = false;
+  let slideInterval;
 
-  function showSlide(index) {
-    slides.removeClass("active")
-    $(slides[index]).addClass("active")
-    currentSlide = index
+  // スライド切り替え関数
+  function changeSlide(nextIndex) {
+    if (isTransitioning) return;
+    
+    isTransitioning = true;
+    
+    // 現在のスライドにトランジションクラスを追加
+    $(`.slider-image[data-index="${currentIndex}"]`).addClass('transitioning');
+    $(`.mobile-info[data-index="${currentIndex}"]`).addClass('transitioning');
+    $(`.desktop-info[data-index="${currentIndex}"]`).addClass('transitioning');
+    
+    setTimeout(() => {
+      // 現在のスライドからアクティブクラスを削除
+      $(`.slider-image[data-index="${currentIndex}"]`).removeClass('active transitioning');
+      $(`.mobile-info[data-index="${currentIndex}"]`).removeClass('active transitioning');
+      $(`.desktop-info[data-index="${currentIndex}"]`).removeClass('active transitioning');
+      
+      // 次のスライドにアクティブクラスを追加
+      currentIndex = nextIndex;
+      $(`.slider-image[data-index="${currentIndex}"]`).addClass('active');
+      $(`.mobile-info[data-index="${currentIndex}"]`).addClass('active');
+      $(`.desktop-info[data-index="${currentIndex}"]`).addClass('active');
+      
+      isTransitioning = false;
+    }, TRANSITION_DURATION);
   }
 
+  // 次のスライドへ
   function nextSlide() {
-    showSlide((currentSlide + 1) % totalSlides)
+    const nextIndex = (currentIndex + 1) % TOTAL_SLIDES;
+    changeSlide(nextIndex);
   }
 
-  if (slides.length > 0) {
-    setInterval(nextSlide, 7000)
+  // 自動再生開始
+  function startAutoPlay() {
+    slideInterval = setInterval(nextSlide, SLIDE_INTERVAL);
   }
 
-  // サウナハット塗り替え
-  let isFlipped = false;
+  // 自動再生停止
+  function stopAutoPlay() {
+    if (slideInterval) {
+      clearInterval(slideInterval);
+    }
+  }
 
-  $(".sauna-hat-container").on("click", function () {
-    const $front = $(this).find(".front");
+  // 自動再生リスタート
+  function restartAutoPlay() {
+    stopAutoPlay();
+    startAutoPlay();
+  }
 
-    if (!isFlipped) {
-      // フロント画像をマスクで徐々に消す
-      $front.addClass("hidden");
-      isFlipped = true;
-    } else {
-      // すぐに表示に戻す（アニメーションなし）
-      $front.removeClass("hidden");
-      isFlipped = false;
+  // スワイプ対応（モバイル用）
+  let touchStartX_firstView = 0;
+  let touchEndX_firstView = 0;
+
+  $('.slider-container').on('touchstart', function(e) {
+    touchStartX = e.originalEvent.touches[0].clientX;
+  });
+
+  $('.slider-container').on('touchend', function(e) {
+    touchEndX_firstView = e.originalEvent.changedTouches[0].clientX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const swipeDistance = touchStartX_firstView - touchEndX_firstView;
+    
+    if (Math.abs(swipeDistance) > swipeThreshold) {
+      if (swipeDistance > 0) {
+        // 左スワイプ - 次へ
+        nextSlide();
+      } else {
+        // 右スワイプ - 前へ
+        const prevIndex = (currentIndex - 1 + TOTAL_SLIDES) % TOTAL_SLIDES;
+        changeSlide(prevIndex);
+      }
+      restartAutoPlay();
+    }
+  }
+
+  // キーボード操作
+  $(document).on('keydown', function(e) {
+    if (e.key === 'ArrowLeft') {
+      const prevIndex = (currentIndex - 1 + TOTAL_SLIDES) % TOTAL_SLIDES;
+      changeSlide(prevIndex);
+      restartAutoPlay();
+    } else if (e.key === 'ArrowRight') {
+      nextSlide();
+      restartAutoPlay();
     }
   });
+
+  // ページの可視性変更時の処理
+  $(document).on('visibilitychange', function() {
+    if (document.hidden) {
+      stopAutoPlay();
+    } else {
+      startAutoPlay();
+    }
+  });
+
+  // 初期化
+  startAutoPlay();
+
+  // サウナハット塗り替え
+$('.sauna-hat-container').on('click', function () {
+  $(this).find('.mask').animate({
+    height: 0
+  }, 3000, 'linear');
+});
 
 
   // ギャラリーモバイルスワイプ
