@@ -21,12 +21,13 @@ $(document).ready(() => {
   // ナビゲーションリンクのスクロール
   $(".nav-link, .mobile-nav-link").click(function () {
     const sectionId = $(this).data("section")
+    const headerHeight = $(".header").height()
     if (sectionId) {
       const section = $("#" + sectionId)
       if (section.length) {
         $("html, body").animate(
           {
-            scrollTop: section.offset().top - 84,
+            scrollTop: section.offset().top - headerHeight,
           },
           800,
         )
@@ -40,7 +41,7 @@ $(document).ready(() => {
   function updateHeaderStyle() {
     const scrollTop = $(window).scrollTop()
     const heroHeight = $(".hero-slider").height()
-    const headerHeight = 84
+    const headerHeight = $(".header").height()
     const headerCenter = headerHeight / 2
 
     if ($(".hero-slider").length) {
@@ -48,7 +49,7 @@ $(document).ready(() => {
       const heroBottom = $(".hero-slider").offset().top + heroHeight
       if (heroBottom - scrollTop <= headerCenter || window.innerWidth < 768) {
         $("#header").addClass("header-white")
-        $("#header-logo").attr("src", "images/partofme_logo_black.jpeg")
+        $("#header-logo").attr("src", "images/partofme_logo_black.png")
       } else {
         $("#header").removeClass("header-white")
         $("#header-logo").attr("src", "images/partofme_logo_tagline_white.jpg")
@@ -56,7 +57,7 @@ $(document).ready(() => {
     } else {
       // 他のページの場合
       $("#header").addClass("header-white")
-      $("#header-logo").attr("src", "images/partofme_logo_black.jpeg")
+      $("#header-logo").attr("src", "images/partofme_logo_black.png")
     }
   }
 
