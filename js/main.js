@@ -65,6 +65,14 @@ $(document).ready(() => {
   $(window).resize(updateHeaderStyle)
   updateHeaderStyle()
 
+  // スマホ画面の高さ取得
+  function setVh() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  setVh();
+  window.addEventListener('resize', setVh);
+
   // スライダー
   // 設定
   const SLIDE_INTERVAL = 7000; // 7秒
@@ -131,7 +139,7 @@ $(document).ready(() => {
   let touchEndX_firstView = 0;
 
   $('.slider-container').on('touchstart', function(e) {
-    touchStartX = e.originalEvent.touches[0].clientX;
+    touchStartX_firstView = e.originalEvent.touches[0].clientX;
   });
 
   $('.slider-container').on('touchend', function(e) {
