@@ -71,8 +71,7 @@ $(document).ready(() => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   }
   setVh();
-  window.addEventListener('resize', setVh);
-
+  
   // スライダー
   // 設定
   const SLIDE_INTERVAL = 7000; // 7秒

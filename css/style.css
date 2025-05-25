@@ -250,7 +250,6 @@ body {
   flex-grow: 1;
   position: relative;
   width: 100%;
-  background-color: #f5efe5;
   overflow: hidden;
 }
 
@@ -285,7 +284,6 @@ body {
 
 /* モバイル用作品情報 */
 .mobile-info-container {
-  background-color: rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1695,6 +1693,7 @@ body {
   }
 
   .hero-slider {
+    height: 100vh;
     padding-top: 0;
     flex-direction: row;
   }
