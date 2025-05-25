@@ -239,10 +239,10 @@ body {
 .hero-slider {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
-  padding-top: 84px; /* ヘッダー分のパディング */
+  padding-top: 80px; /* ヘッダー分のパディング */
 }
 
 /* スライダーコンテナ - スマホ版 */
@@ -286,12 +286,11 @@ body {
 /* モバイル用作品情報 */
 .mobile-info-container {
   background-color: rgba(255, 255, 255, 0.7);
-  padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 80px;
+  min-height: 110px;
 }
 
 .mobile-info {
@@ -300,6 +299,10 @@ body {
   text-align: center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 0;
 }
 
 .mobile-info.active {
@@ -310,22 +313,15 @@ body {
   opacity: 0;
 }
 
+.mobile-info p{
+  margin: 0;
+  padding: 4px 0;
+  font-size: 14px;
+  color: black;
+}
+
 .mobile-info .artwork-title {
   font-weight: 500;
-  font-size: 14px;
-  color: black;
-  margin-bottom: 4px;
-}
-
-.mobile-info .artist-name,
-.mobile-info .atelier-name {
-  font-size: 14px;
-  color: black;
-  margin-bottom: 4px;
-}
-
-.mobile-info .atelier-name {
-  margin-bottom: 0;
 }
 
 /* デスクトップ用作品情報 - スマホでは非表示 */
@@ -334,6 +330,7 @@ body {
 }
 
 /* CSSアニメーション */
+/*
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -351,6 +348,7 @@ body {
     opacity: 0;
   }
 }
+*/
 
 /* Concept Section */
 .concept-section {
@@ -725,7 +723,7 @@ body {
   background-color: var(--gallery-bg);
 }
 
-.artwork-title {
+.art-title {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 10px;
