@@ -188,14 +188,6 @@ $(document).ready(() => {
   startAutoPlay();
 
   // サウナハット塗り替え
-  /*
-$('.sauna-hat-container').on('click', function () {
-  $(this).find('.mask').animate({
-    height: 0
-  }, 1500, 'linear');
-});
-*/
-
 let isAnimating = false;
 
 $('.sauna-hat-container').on('click', function () {
