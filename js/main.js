@@ -52,7 +52,7 @@ $(document).ready(() => {
         $("#header-logo").attr("src", "images/partofme_logo_black.png")
       } else {
         $("#header").removeClass("header-white")
-        $("#header-logo").attr("src", "images/partofme_logo_tagline_white.jpg")
+        $("#header-logo").attr("src", "images/partofme_logo_white.png")
       }
     } else {
       // 他のページの場合
