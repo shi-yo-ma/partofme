@@ -189,10 +189,38 @@ $(document).ready(() => {
   startAutoPlay();
 
   // サウナハット塗り替え
+  /*
 $('.sauna-hat-container').on('click', function () {
   $(this).find('.mask').animate({
     height: 0
-  }, 3000, 'linear');
+  }, 1500, 'linear');
+});
+*/
+
+let isAnimating = false;
+
+$('.sauna-hat-container').on('click', function () {
+  if (isAnimating) return;
+
+  isAnimating = true;
+  const $mask = $(this).find('.mask');
+  const currentHeight = $mask.height();
+
+  if (currentHeight === 0) {
+    // 再表示する（元の高さを指定、例として100%にしておく）
+    $mask.stop().animate({
+      height: '100%'
+    }, 1500, 'linear', function () {
+      isAnimating = false;
+    });
+  } else {
+    // 非表示にする
+    $mask.stop().animate({
+      height: 0
+    }, 1500, 'linear', function () {
+      isAnimating = false;
+    });
+  }
 });
 
 
