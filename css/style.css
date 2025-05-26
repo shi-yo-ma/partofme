@@ -672,34 +672,104 @@ body {
   position: relative;
 }
 
-.gallery-section::before {
-  content: "";
+.gallery-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.gallery-carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  position: relative;
+  width: 80%;
+  height: 800px;
+}
+
+.gallery-slide {
+  min-width: 100%;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
   position: absolute;
-  inset: 0;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
-  opacity: 0.1;
+  left: 0;
+  top: 0;
+  text-align: center;
   z-index: 0;
 }
 
-.gallery-section::after {
-  content: "";
+.gallery-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 中央 */
+.gallery-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* 左のスライド（次に来る） */
+.gallery-slide.prev {
+  opacity: 1;
+  transform: scale(0.8) translateX(-60%) rotateY(30deg);
+  z-index: 1;
+}
+
+/* 右のスライド（前にあった） */
+.gallery-slide.next {
+  opacity: 1;
+  transform: scale(0.8) translateX(60%) rotateY(-30deg);
+  z-index: 1;
+}
+
+.carousel-arrow {
   position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
-  opacity: 0.3;
-  z-index: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.carousel-arrow.prev {
+  left: 0;
+}
+
+.carousel-arrow.next {
+  right: 0;
+}
+
+/*
+.gallery-section {
+  padding: 40px 0;
+  background-color: var(--gallery-bg);
+  position: relative;
 }
 
 .gallery-section .container {
   position: relative;
   z-index: 1;
 }
+*/
 
-/* Mobile Gallery */
-.gallery-mobile {
+/* Gallery */
+/*
+.gallery-content {
   display: block;
 }
 
@@ -726,7 +796,6 @@ body {
   height: auto;
   object-fit: contain;
   margin-bottom: 15px;
-  background-color: var(--gallery-bg);
 }
 
 .art-title {
@@ -754,27 +823,10 @@ body {
 .view-artist-btn:hover {
   background-color: #4a3a2f;
 }
-
-.gallery-indicators {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 20px;
-}
-
-.gallery-indicator {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: rgba(90, 74, 63, 0.3);
-  transition: var(--transition);
-}
-
-.gallery-indicator.active {
-  background-color: #5a4a3f;
-}
+*/
 
 /* Desktop Gallery */
+/*
 .gallery-desktop {
   display: none;
 }
@@ -845,6 +897,7 @@ body {
 .gallery-item.small .gallery-image {
   height: 200px;
 }
+*/
 
 /* Footer */
 .footer {
@@ -1766,10 +1819,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     padding: 30px 100px;
-  }
-
-  .gallery-mobile {
-    display: none;
   }
 
   .gallery-desktop {

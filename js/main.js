@@ -400,6 +400,34 @@ $('.sauna-hat-container').on('click', function () {
     },
   ]
 
+  $(function () {
+    const $slides = $('.gallery-slide');
+    let current = 0;
+
+    function updateSlides() {
+      $slides.removeClass('prev next active');
+      const total = $slides.length;
+      const prev = (current - 1 + total) % total;
+      const next = (current + 1) % total;
+
+      $slides.eq(prev).addClass('prev');
+      $slides.eq(current).addClass('active');
+      $slides.eq(next).addClass('next');
+    }
+
+    $('.carousel-arrow.prev').on('click', function () {
+      current = (current - 1 + $slides.length) % $slides.length;
+      updateSlides();
+    });
+
+    $('.carousel-arrow.next').on('click', function () {
+      current = (current + 1) % $slides.length;
+      updateSlides();
+    });
+
+    updateSlides();
+  });
+  
   $(".view-artist-btn, .gallery-item").click(function () {
     const artistId = $(this).data("artist")
     const artist = artistData.find((item) => item.id === artistId)
@@ -412,6 +440,7 @@ $('.sauna-hat-container').on('click', function () {
       $("body").css("overflow", "hidden")
     }
   })
+  
 
   // モーダルを閉じる
   $(".modal-close").click(() => {
