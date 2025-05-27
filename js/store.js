@@ -1,6 +1,3 @@
-// Import jQuery
-const $ = require("jquery")
-
 $(document).ready(() => {
   // 商品データ
   const products = [

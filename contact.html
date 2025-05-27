@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+        emailjs.init("HyMhQZJWi5ba10389");
+    })();
+  </script>
 </head>
 <body class="contact-page">
   <!-- ヘッダー -->
@@ -80,6 +86,7 @@
         <div class="contact-content">
           <div class="contact-form-container">
             <form id="contact-form" class="contact-form">
+              <input type="hidden" name="contact_number">
               <div class="form-group">
                 <label for="contactType">お問い合わせの種類</label>
                 <div class="radio-group">
