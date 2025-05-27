@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="store-page">
   <!-- ヘッダー -->
@@ -155,18 +155,7 @@
       </div>
       <div class="modal-body product-modal-body">
         <div class="product-modal-left">
-          <div class="product-slider">
-            <div class="product-slider-container" id="product-slider-container">
-              <!-- スライダー画像はJavaScriptで動的に生成されます -->
-            </div>
-            <div class="slider-controls">
-              <button id="prev-slide" class="slider-control"><i class="fas fa-chevron-left"></i></button>
-              <button id="next-slide" class="slider-control"><i class="fas fa-chevron-right"></i></button>
-            </div>
-            <div class="slider-indicators" id="slider-indicators">
-              <!-- インジケーターはJavaScriptで動的に生成されます -->
-            </div>
-          </div>
+          <div id="product-modal-image" class="product-modal-image"></div>
           <div class="product-purchase">
             <h3>購入する</h3>
             <div class="purchase-buttons">

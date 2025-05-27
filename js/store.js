@@ -3,8 +3,8 @@ $(document).ready(() => {
   const products = [
     {
       id: 1,
-      name: "サウナハット",
-      price: "3,800",
+      name: "サウナハット（ブラック）",
+      price: "5,720（税込）",
       description:
         "障がい者アーティスト山田太郎氏の鮮やかな色彩のアートをプリントしたサウナハット。耐熱性と快適さを兼ね備え、サウナでの時間をより特別なものにします。",
       shortDescription: `障がい者アーティスト山田太郎氏の鮮やかな色彩のアートをプリントしたサウナハット。耐熱性と快適さを兼ね備え、サウナでの時間をより特別なものにします。
@@ -16,15 +16,14 @@ $(document).ready(() => {
 サウナハットは、高温のサウナ室内で頭部を熱から守るために設計されています。このアートサウナハットは、機能性だけでなく、障がい者アーティストの作品を身に着けることで、アートの新しい楽しみ方を提案します。
 
 お手入れ方法：手洗い推奨、陰干し、アイロン使用不可`,
-      image: "images/saunahat_black.jpg",
-      images: ["images/saunahat_black.jpg", "images/saunahat_beige.jpg", "images/saunahat_art.jpg"],
-      amazonUrl: "https://www.amazon.co.jp/",
+      image: "images/saunahat_black-removebg.png",
+      amazonUrl: "https://www.amazon.co.jp/Part-%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88-%EF%BC%92way%E3%82%BF%E3%82%A4%E3%83%97-%E9%9A%9C%E3%81%8C%E3%81%84%E8%80%85%E3%82%A2%E3%83%BC%E3%83%88-%E3%80%8Euntitled%E3%80%8F/dp/B0DQKMK4HB/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3TUGB7MIAKYOM&dib=eyJ2IjoiMSJ9.KhJ1OrC5n3KiRY4FR-4cKfoDyQNBz5CDrSmum5O3gsJ5UmU7Ao29nYDluIOnMjwD1Sieu0aeIkNld8K7S4dukVGUazc9GcUKNaiFE1cADnE5BzS7ULp9MtFbGTOxb_lMvhUEtV8EKBwez9H0-6QDQVoET2PZ_tH0_GbxfFZKK78t7QE2mDENcH1cgIlPCWQ7AhhJyKAiOtk_OVI1k1TxCZvEUP1a2aa5q5oKByzyhhJAEBSZTfpArTuqnpyG7O7yiwYTvI1dAvwdq6ySgTcMfUIFVbvBPOQHeOL9INO14RA.KHlZgMz481OyVjFZPYgrKpBdoAzunGJsE_z9R3uN9Z0&dib_tag=se&keywords=%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88part%2Bof%2Bme&qid=1748332913&sprefix=%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88part%2Bof%2Bme%2Caps%2C173&sr=8-1&th=1&psc=1",
       baseUrl: "https://base.shop/",
     },
     {
       id: 2,
-      name: "カラフルアートソックス",
-      price: "1,500",
+      name: "サウナハット（ベージュ）",
+      price: "5,720（税込）",
       description:
         "佐藤花子氏の独特な線画アートがデザインされた靴下。柔らかな肌触りと耐久性を兼ね備え、日常に彩りを添えます。サイズは23-25cmと25-27cmをご用意。",
       shortDescription: `佐藤花子氏の独特な線画アートがデザインされた靴下。柔らかな肌触りと耐久性を兼ね備え、日常に彩りを添えます。
@@ -36,15 +35,14 @@ $(document).ready(() => {
 佐藤花子氏は繊細なタッチと独特の色彩感覚で知られる障がい者アーティストです。このアートソックスは、彼女の作品を日常に取り入れられるアイテムとして企画されました。履くたびに気分が上がる鮮やかなデザインは、ファッションのアクセントとしても最適です。
 
 お手入れ方法：洗濯ネット使用で洗濯機可、漂白剤使用不可、アイロン低温可`,
-      image: "images/top3.jpg",
-      images: ["images/top3.jpg"],
-      amazonUrl: "https://www.amazon.co.jp/",
+      image: "images/saunahat_beige-removebg.png",
+      amazonUrl: "https://www.amazon.co.jp/Part-%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88-%EF%BC%92way%E3%82%BF%E3%82%A4%E3%83%97-%E9%9A%9C%E3%81%8C%E3%81%84%E8%80%85%E3%82%A2%E3%83%BC%E3%83%88-%E3%80%8Euntitled%E3%80%8F/dp/B0DR9K7WG2/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3TUGB7MIAKYOM&dib=eyJ2IjoiMSJ9.KhJ1OrC5n3KiRY4FR-4cKfoDyQNBz5CDrSmum5O3gsJ5UmU7Ao29nYDluIOnMjwD1Sieu0aeIkNld8K7S4dukVGUazc9GcUKNaiFE1cADnE5BzS7ULp9MtFbGTOxb_lMvhUEtV8EKBwez9H0-6QDQVoET2PZ_tH0_GbxfFZKK78t7QE2mDENcH1cgIlPCWQ7AhhJyKAiOtk_OVI1k1TxCZvEUP1a2aa5q5oKByzyhhJAEBSZTfpArTuqnpyG7O7yiwYTvI1dAvwdq6ySgTcMfUIFVbvBPOQHeOL9INO14RA.KHlZgMz481OyVjFZPYgrKpBdoAzunGJsE_z9R3uN9Z0&dib_tag=se&keywords=%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88part%2Bof%2Bme&qid=1748332913&sprefix=%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88part%2Bof%2Bme%2Caps%2C173&sr=8-1&th=1&psc=1",
       baseUrl: "https://base.shop/",
     },
     {
       id: 3,
-      name: "アートボクサーパンツ",
-      price: "2,200",
+      name: "サウナハット（障がい者アート）",
+      price: "6,380（税込）",
       description:
         "鈴木一郎氏の抽象画をプリントしたボクサーパンツ。オーガニックコットン100%で肌に優しく、快適な着心地です。S、M、Lの3サイズ展開。",
       shortDescription: `鈴木一郎氏の抽象画をプリントしたボクサーパンツ。オーガニックコットン100%で肌に優しく、快適な着心地です。
@@ -56,15 +54,14 @@ $(document).ready(() => {
 鈴木一郎氏は、幼少期の事故により身体障害を持ちながらも、リハビリの一環として始めた絵画が人生を変えたアーティストです。このボクサーパンツは、鈴木氏の代表作「光と影の交差」をプリントしたアイテムです。
 
 お手入れ方法：洗濯ネット使用で洗濯機可（30℃以下）、漂白剤使用不可、アイロン低温可`,
-      image: "images/top4.jpg",
-      images: ["images/top4.jpg"],
-      amazonUrl: "https://www.amazon.co.jp/",
+      image: "images/saunahat_art-removebg.png",
+      amazonUrl: "https://www.amazon.co.jp/Part-%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88-%EF%BC%92way%E3%82%BF%E3%82%A4%E3%83%97-%E9%9A%9C%E3%81%8C%E3%81%84%E8%80%85%E3%82%A2%E3%83%BC%E3%83%88-%E3%80%8Euntitled%E3%80%8F/dp/B0DR9MQQ8Y/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3TUGB7MIAKYOM&dib=eyJ2IjoiMSJ9.KhJ1OrC5n3KiRY4FR-4cKfoDyQNBz5CDrSmum5O3gsJ5UmU7Ao29nYDluIOnMjwD1Sieu0aeIkNld8K7S4dukVGUazc9GcUKNaiFE1cADnE5BzS7ULp9MtFbGTOxb_lMvhUEtV8EKBwez9H0-6QDQVoET2PZ_tH0_GbxfFZKK78t7QE2mDENcH1cgIlPCWQ7AhhJyKAiOtk_OVI1k1TxCZvEUP1a2aa5q5oKByzyhhJAEBSZTfpArTuqnpyG7O7yiwYTvI1dAvwdq6ySgTcMfUIFVbvBPOQHeOL9INO14RA.KHlZgMz481OyVjFZPYgrKpBdoAzunGJsE_z9R3uN9Z0&dib_tag=se&keywords=%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88part%2Bof%2Bme&qid=1748332913&sprefix=%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88part%2Bof%2Bme%2Caps%2C173&sr=8-1&th=1&psc=1",
       baseUrl: "https://base.shop/",
     },
     {
       id: 4,
-      name: "アートトートバッグ",
-      price: "2,800",
+      name: "オリジナルアイテム制作",
+      price: "Ask",
       description:
         "高橋誠氏の色彩豊かなアートをプリントしたトートバッグ。丈夫なキャンバス生地で、日常使いからお出かけまで幅広く活躍します。内ポケット付き。",
       shortDescription: `高橋誠氏の色彩豊かなアートをプリントしたトートバッグ。丈夫なキャンバス生地で、日常使いからお出かけまで幅広く活躍します。
@@ -76,51 +73,11 @@ $(document).ready(() => {
 高橋誠氏は、自閉症スペクトラムを持ちながらも、独自の色彩感覚と構図で注目を集めるアーティストです。このトートバッグは、厚手のキャンバス生地を使用し、内側には小物を整理できるポケットを2つ配置しています。
 
 お手入れ方法：手洗い推奨、漂白剤使用不可、アイロン中温可`,
-      image: "images/top1.jpg",
-      images: ["images/top1.jpg"],
+      image: "images/original-item-removebg.png",
       amazonUrl: "https://www.amazon.co.jp/",
       baseUrl: "https://base.shop/",
     },
-    {
-      id: 5,
-      name: "アートポスター",
-      price: "1,800",
-      description:
-        "中村洋子氏の繊細なタッチで描かれた風景画のポスター。A3サイズで、お部屋のインテリアとして最適です。高品質な紙を使用し、色鮮やかに仕上げています。",
-      shortDescription: `中村洋子氏の繊細なタッチで描かれた風景画のポスター。A3サイズで、お部屋のインテリアとして最適です。
-
-【アーティスト】中村洋子
-【素材】高品質アート専用紙（マット仕上げ）
-【サイズ】A3（297mm × 420mm）
-
-中村洋子氏は、ダウン症を持ちながらも、独自の視点で風景を捉える才能を持つアーティストです。このポスターは、高品質なアート専用紙を使用し、中村氏の繊細なタッチと色彩を忠実に再現しています。
-
-注意事項：額縁は付属していません、直射日光や湿気の多い場所での保管・掲示は避けてください`,
-      image: "images/top5.jpg",
-      images: ["images/top5.jpg"],
-      amazonUrl: "https://www.amazon.co.jp/",
-      baseUrl: "https://base.shop/",
-    },
-    {
-      id: 6,
-      name: "デザインマスク",
-      price: "980",
-      description:
-        "田中健太氏のポップなデザインが施された布マスク。洗って繰り返し使える環境に優しい素材を使用。3層構造で安心の防護性能を備えています。",
-      shortDescription: `田中健太氏のポップなデザインが施された布マスク。洗って繰り返し使える環境に優しい素材を使用。3層構造で安心の防護性能を備えています。
-
-【アーティスト】田中健太
-【素材】表地・裏地：オーガニックコットン100%、中層：不織布フィルター
-【サイズ】大人用（約17cm × 9.5cm）、子供用（約14cm × 8cm）
-
-田中健太氏は、発達障害を持ちながらも、ポップでカラフルなデザインで人気を集めるアーティストです。このデザインマスクは3層構造で飛沫をしっかりガードしながら、通気性も確保しています。
-
-お手入れ方法：手洗い推奨、洗濯ネット使用で洗濯機可（30℃以下）、漂白剤使用不可`,
-      image: "images/top3.jpg",
-      images: ["images/top3.jpg"],
-      amazonUrl: "https://www.amazon.co.jp/",
-      baseUrl: "https://base.shop/",
-    },
+    
   ]
 
   // 商品一覧を表示
@@ -136,7 +93,7 @@ $(document).ready(() => {
           </div>
           <div class="product-details">
             <h3>${product.name}</h3>
-            <p class="price">¥${product.price}（税込・送料別）</p>
+            <p class="price">¥${product.price}</p>
             <p class="description">${product.description}</p>
             <div class="purchase-links" data-prevent-click="true">
               <a href="${product.amazonUrl}" target="_blank" rel="noopener noreferrer" class="purchase-link">Amazon</a>
@@ -166,35 +123,17 @@ $(document).ready(() => {
   // 商品詳細モーダルを表示
   function showProductModal(product) {
     $("#product-modal-name").text(product.name)
-    $("#product-modal-price").text(`¥${product.price}（税込・送料別）`)
+    $("#product-modal-price").text(`¥${product.price}`)
     $("#product-modal-description").html(product.shortDescription.replace(/\n/g, "<br>"))
+    $("#product-modal-image").html(`<img src="${product.image}" alt="${product.name}の写真">`)
     $("#amazon-link").attr("href", product.amazonUrl)
     $("#base-link").attr("href", product.baseUrl)
-
-    // スライダー画像を設定
-    const sliderContainer = $("#product-slider-container")
-    const sliderIndicators = $("#slider-indicators")
-    sliderContainer.empty()
-    sliderIndicators.empty()
-
-    product.images.forEach((image, index) => {
-      const isActive = index === 0 ? "active" : ""
-      sliderContainer.append(`
-        <div class="product-slide ${isActive}">
-          <img src="${image}" alt="${product.name} - 画像${index + 1}">
-        </div>
-      `)
-
-      sliderIndicators.append(`
-        <span class="slider-indicator ${isActive}" data-index="${index}"></span>
-      `)
-    })
-
     $("#product-modal").addClass("active")
     $("body").css("overflow", "hidden")
   }
 
   // スライダーの操作
+  /*
   let currentSlideIndex = 0
 
   $("#prev-slide").click(() => {
@@ -240,6 +179,7 @@ $(document).ready(() => {
     $(slides[currentSlideIndex]).addClass("active")
     $(indicators[currentSlideIndex]).addClass("active")
   })
+  */
 
   // 特集商品のフリップアニメーション
   $(".flip-container").click(function () {
