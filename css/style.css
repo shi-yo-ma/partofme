@@ -516,8 +516,8 @@ body {
 
 .sauna-hat-container {
   position: relative;
-  width: 300px;
-  height: 340px;
+  width: 230px;
+  height: 260px;
   cursor: pointer;
 }
 
@@ -580,7 +580,7 @@ body {
 .product-info {
   max-width: 500px;
   padding: 20px;
-  border: 1px dashed #ccc;
+  border: 3px dashed #ccc;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -589,7 +589,8 @@ body {
 
 .product-info p {
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: clamp(12px, 3.0vw, 16px);;
+  color: var(--light-text);
 }
 
 .product-link {
@@ -963,9 +964,7 @@ body {
 
 .product-card {
   background-color: white;
-  /*border-radius: var(--border-radius);*/
   overflow: hidden;
-  /*box-shadow: var(--shadow);*/
   cursor: pointer;
   transition: var(--transition);
   border: 1px solid var(--border-color);
@@ -1032,15 +1031,39 @@ body {
   flex: 1;
   padding: 8px 0;
   text-align: center;
-  background-color: #e0e0e0;
-  color: var(--primary-color);
   border-radius: 4px;
   font-size: 14px;
   transition: var(--transition);
 }
 
-.purchase-link:hover {
-  background-color: #d0d0d0;
+.amazon-link {
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  color: #111;
+}
+
+.base-link {
+  background-color: #AEE6D2;
+  border: none;
+  color: #333;
+}
+
+.contact-link {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.amazon-link:hover {
+  background-color: #e5a93c;
+  border-color: #a67700;
+}
+
+.base-link:hover {
+  background-color: #4BC9A8;
+}
+
+.contact-link:hover {
+  background-color: #3d8b40;
 }
 
 /* Featured Product */
@@ -1051,14 +1074,15 @@ body {
 
 .featured-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
 .featured-image {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
 
 .flip-container {
@@ -1110,13 +1134,13 @@ body {
 }
 
 .featured-info {
-  text-align: center;
+  text-align: left;
   max-width: 400px;
 }
 
 .featured-info p {
-  margin-bottom: 15px;
-  font-size: 14px;
+  margin-bottom: 20px;
+  font-size: clamp(14px, 2.5vw, 18px);
 }
 
 .featured-link {
@@ -1125,6 +1149,7 @@ body {
   border: 1px solid var(--primary-color);
   border-radius: 4px;
   transition: var(--transition);
+  font-size: clamp(14px, 2.5vw, 18px);
 }
 
 .featured-link:hover {
@@ -1202,21 +1227,24 @@ body {
 }
 
 .amazon-btn {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  color: #111;
 }
 
 .amazon-btn:hover {
-  background-color: #333;
+  background-color: #e5a93c;
+  border-color: #a67700;
 }
 
 .base-btn {
-  background-color: #4caf50;
-  color: white;
+  background-color: #AEE6D2;
+  border: none;
+  color: #333;
 }
 
 .base-btn:hover {
-  background-color: #3d8b40;
+  background-color: #4BC9A8;
 }
 
 .product-modal-right h3 {
@@ -1581,6 +1609,13 @@ body {
     font-size: 36px;
   }
 
+  .product-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 100px;
+  }
+
   .news-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
@@ -1609,9 +1644,7 @@ body {
   }
 
   .featured-content {
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
+    gap: 50px;
   }
 
   .featured-image {
@@ -1624,18 +1657,8 @@ body {
   }
 
   .featured-info p {
-    text-align: left;
     margin-bottom: 30px;
     font-size: 18px;
-  }
-
-  .featured-link {
-    display: inline-block;
-    font-size: 18px;
-    padding: 8px 16px;
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
-    transition: var(--transition);
   }
 
   .product-modal-body {
@@ -1719,10 +1742,33 @@ body {
     width: clamp(76.5px, 6.3vw, 108px);
   }
 
-  .product-content {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+   .sauna-hat-container {
+    width: 300px;
+    height: 340px;
+  }
+
+  .tap-hint img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tap-hint span {
+    font-size: 16px;
+  }
+
+  .product-info {
+    max-width: 700px;
+    padding: 30px;
+  }
+
+  .product-info p {
+    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 1.8;
+  }
+
+  .product-link {
+    display: inline-block;
   }
 
   .news-summary {
@@ -1746,11 +1792,21 @@ body {
   }
 
   .featured-content {
-    gap: 100px;
+    gap: 150px;
   }
 
-   .featured-info {
+  .featured-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .featured-info {
     max-width: 500px;
+  }
+
+  .featured-info p {
+    margin-bottom: 35px;
+    font-size: 22px;
   }
 }
 

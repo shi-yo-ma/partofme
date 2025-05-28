@@ -19,6 +19,7 @@ $(document).ready(() => {
       image: "images/saunahat_black-removebg.png",
       amazonUrl: "https://www.amazon.co.jp/Part-%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88-%EF%BC%92way%E3%82%BF%E3%82%A4%E3%83%97-%E9%9A%9C%E3%81%8C%E3%81%84%E8%80%85%E3%82%A2%E3%83%BC%E3%83%88-%E3%80%8Euntitled%E3%80%8F/dp/B0DQKMK4HB/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3TUGB7MIAKYOM&dib=eyJ2IjoiMSJ9.KhJ1OrC5n3KiRY4FR-4cKfoDyQNBz5CDrSmum5O3gsJ5UmU7Ao29nYDluIOnMjwD1Sieu0aeIkNld8K7S4dukVGUazc9GcUKNaiFE1cADnE5BzS7ULp9MtFbGTOxb_lMvhUEtV8EKBwez9H0-6QDQVoET2PZ_tH0_GbxfFZKK78t7QE2mDENcH1cgIlPCWQ7AhhJyKAiOtk_OVI1k1TxCZvEUP1a2aa5q5oKByzyhhJAEBSZTfpArTuqnpyG7O7yiwYTvI1dAvwdq6ySgTcMfUIFVbvBPOQHeOL9INO14RA.KHlZgMz481OyVjFZPYgrKpBdoAzunGJsE_z9R3uN9Z0&dib_tag=se&keywords=%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88part%2Bof%2Bme&qid=1748332913&sprefix=%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88part%2Bof%2Bme%2Caps%2C173&sr=8-1&th=1&psc=1",
       baseUrl: "https://base.shop/",
+      otherUrl: "",
     },
     {
       id: 2,
@@ -38,6 +39,7 @@ $(document).ready(() => {
       image: "images/saunahat_beige-removebg.png",
       amazonUrl: "https://www.amazon.co.jp/Part-%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88-%EF%BC%92way%E3%82%BF%E3%82%A4%E3%83%97-%E9%9A%9C%E3%81%8C%E3%81%84%E8%80%85%E3%82%A2%E3%83%BC%E3%83%88-%E3%80%8Euntitled%E3%80%8F/dp/B0DR9K7WG2/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3TUGB7MIAKYOM&dib=eyJ2IjoiMSJ9.KhJ1OrC5n3KiRY4FR-4cKfoDyQNBz5CDrSmum5O3gsJ5UmU7Ao29nYDluIOnMjwD1Sieu0aeIkNld8K7S4dukVGUazc9GcUKNaiFE1cADnE5BzS7ULp9MtFbGTOxb_lMvhUEtV8EKBwez9H0-6QDQVoET2PZ_tH0_GbxfFZKK78t7QE2mDENcH1cgIlPCWQ7AhhJyKAiOtk_OVI1k1TxCZvEUP1a2aa5q5oKByzyhhJAEBSZTfpArTuqnpyG7O7yiwYTvI1dAvwdq6ySgTcMfUIFVbvBPOQHeOL9INO14RA.KHlZgMz481OyVjFZPYgrKpBdoAzunGJsE_z9R3uN9Z0&dib_tag=se&keywords=%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88part%2Bof%2Bme&qid=1748332913&sprefix=%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88part%2Bof%2Bme%2Caps%2C173&sr=8-1&th=1&psc=1",
       baseUrl: "https://base.shop/",
+      otherUrl: "",
     },
     {
       id: 3,
@@ -57,6 +59,7 @@ $(document).ready(() => {
       image: "images/saunahat_art-removebg.png",
       amazonUrl: "https://www.amazon.co.jp/Part-%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88-%EF%BC%92way%E3%82%BF%E3%82%A4%E3%83%97-%E9%9A%9C%E3%81%8C%E3%81%84%E8%80%85%E3%82%A2%E3%83%BC%E3%83%88-%E3%80%8Euntitled%E3%80%8F/dp/B0DR9MQQ8Y/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3TUGB7MIAKYOM&dib=eyJ2IjoiMSJ9.KhJ1OrC5n3KiRY4FR-4cKfoDyQNBz5CDrSmum5O3gsJ5UmU7Ao29nYDluIOnMjwD1Sieu0aeIkNld8K7S4dukVGUazc9GcUKNaiFE1cADnE5BzS7ULp9MtFbGTOxb_lMvhUEtV8EKBwez9H0-6QDQVoET2PZ_tH0_GbxfFZKK78t7QE2mDENcH1cgIlPCWQ7AhhJyKAiOtk_OVI1k1TxCZvEUP1a2aa5q5oKByzyhhJAEBSZTfpArTuqnpyG7O7yiwYTvI1dAvwdq6ySgTcMfUIFVbvBPOQHeOL9INO14RA.KHlZgMz481OyVjFZPYgrKpBdoAzunGJsE_z9R3uN9Z0&dib_tag=se&keywords=%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88part%2Bof%2Bme&qid=1748332913&sprefix=%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%8F%E3%83%83%E3%83%88part%2Bof%2Bme%2Caps%2C173&sr=8-1&th=1&psc=1",
       baseUrl: "https://base.shop/",
+      otherUrl: "",
     },
     {
       id: 4,
@@ -76,6 +79,7 @@ $(document).ready(() => {
       image: "images/original-item-removebg.png",
       amazonUrl: "https://www.amazon.co.jp/",
       baseUrl: "https://base.shop/",
+      otherUrl: "contact.html",
     },
     
   ]
@@ -86,22 +90,42 @@ $(document).ready(() => {
     productsContainer.empty()
 
     products.forEach((product) => {
-      const productCard = `
-        <div class="product-card" data-id="${product.id}">
-          <div class="product-image">
-            <img src="${product.image}" alt="${product.name}">
-          </div>
-          <div class="product-details">
-            <h3>${product.name}</h3>
-            <p class="price">¥${product.price}</p>
-            <p class="description">${product.description}</p>
-            <div class="purchase-links" data-prevent-click="true">
-              <a href="${product.amazonUrl}" target="_blank" rel="noopener noreferrer" class="purchase-link">Amazon</a>
-              <a href="${product.baseUrl}" target="_blank" rel="noopener noreferrer" class="purchase-link">BASE</a>
+      let productCard = '';
+
+      if (product.id === 4) {
+        productCard = `
+          <div class="product-card" data-id="${product.id}">
+            <div class="product-image">
+              <img src="${product.image}" alt="${product.name}">
+            </div>
+            <div class="product-details">
+              <h3>${product.name}</h3>
+              <p class="price">¥${product.price}</p>
+              <p class="description">${product.description}</p>
+              <div class="purchase-links" data-prevent-click="true">
+                <a href="${product.otherUrl}" target="_blank" rel="noopener noreferrer" class="purchase-link contact-link">お問い合わせ</a>
+              </div>
             </div>
           </div>
-        </div>
-      `
+        `
+      } else {
+        productCard = `
+          <div class="product-card" data-id="${product.id}">
+            <div class="product-image">
+              <img src="${product.image}" alt="${product.name}">
+            </div>
+            <div class="product-details">
+              <h3>${product.name}</h3>
+              <p class="price">¥${product.price}</p>
+              <p class="description">${product.description}</p>
+              <div class="purchase-links" data-prevent-click="true">
+                <a href="${product.amazonUrl}" target="_blank" rel="noopener noreferrer" class="purchase-link amazon-link">Amazon</a>
+                <a href="${product.baseUrl}" target="_blank" rel="noopener noreferrer" class="purchase-link base-link">BASE</a>
+              </div>
+            </div>
+          </div>
+        `
+      }
       productsContainer.append(productCard)
     })
   }
@@ -131,5 +155,19 @@ $(document).ready(() => {
     $("#product-modal").addClass("active")
     $("body").css("overflow", "hidden")
   }
+
+  // モーダルを閉じる
+  $(".modal-close").click(() => {
+    $(".modal").removeClass("active")
+    $("body").css("overflow", "")
+  })
+
+  // モーダル外クリックで閉じる
+  $(".modal").click(function (e) {
+    if ($(e.target).hasClass("modal")) {
+      $(this).removeClass("active")
+      $("body").css("overflow", "")
+    }
+  })
 
 })
