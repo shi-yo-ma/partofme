@@ -400,33 +400,113 @@ $('.sauna-hat-container').on('click', function () {
     },
   ]
 
-  $(function () {
-    const $slides = $('.gallery-slide');
-    let current = 0;
+  const $carousel = $('.gallery-carousel')
+  const $slides = $('.gallery-slide')
+  const totalSlides = $slides.length
+  let currentArtIndex = 0
 
-    function updateSlides() {
-      $slides.removeClass('prev next active');
-      const total = $slides.length;
-      const prev = (current - 1 + total) % total;
-      const next = (current + 1) % total;
+  // クローンスライドを前後に追加（ループ感のため）
+  const $firstClone = $slides.first().clone()
+  const $lastClone = $slides.last().clone()
 
-      $slides.eq(prev).addClass('prev');
-      $slides.eq(current).addClass('active');
-      $slides.eq(next).addClass('next');
+  $carousel.prepend($lastClone)
+  $carousel.append($firstClone)
+
+  let $allSlides = $('.gallery-slide')
+
+  function updateCarousel(animate = true) {
+    $allSlides.removeClass('active')
+
+    const $target = $allSlides.eq(currentArtIndex + 1);
+    $target.addClass('active')
+
+    const slideWidth = $allSlides.eq(currentArtIndex + 1).outerWidth(true)
+    const wrapperWidth = $carousel.parent().width()
+    const offset = (wrapperWidth / 2) - (slideWidth / 2) - slideWidth * (currentArtIndex + 1)
+
+    if (animate) {
+      $carousel.css({
+        transition: 'transform 0.5s ease',
+        transform: `translateX(${offset}px)`
+      })
+    } else {
+      $target.css('transition', 'none');
+
+      $carousel.css({
+        transition: 'none',
+        transform: `translateX(${offset}px)`
+      })
+
+      void $target[0].offsetHeight;
+
+      $target.css('transition', '');
+      
     }
+  }
 
-    $('.carousel-arrow.prev').on('click', function () {
-      current = (current - 1 + $slides.length) % $slides.length;
-      updateSlides();
-    });
+  function goToSlide(index) {
+    currentArtIndex = index
+    updateCarousel()
+  }
 
-    $('.carousel-arrow.next').on('click', function () {
-      current = (current + 1) % $slides.length;
-      updateSlides();
-    });
+  $('.carousel-arrow.prev').on('click', function () {
+    if (currentArtIndex <= 0) {
+      currentArtIndex = -1
+      updateCarousel()
+      setTimeout(() => {
+        currentArtIndex = totalSlides - 1
+        updateCarousel(false)
+      }, 500)
+    } else {
+      currentArtIndex--
+      updateCarousel()
+    }
+  })
 
-    updateSlides();
+  $('.carousel-arrow.next').on('click', function () {
+    if (currentArtIndex >= totalSlides - 1) {
+      currentArtIndex = totalSlides
+      updateCarousel()
+      setTimeout(() => {
+        currentArtIndex = 0
+        updateCarousel(false)
+      }, 500)
+    } else {
+      currentArtIndex++
+      updateCarousel()
+    }
+  })
+
+  // スワイプ対応
+  let touchArtStartX = 0
+  let touchArtEndX = 0
+
+  $carousel.on('touchstart', function (e) {
+    touchArtStartX = e.originalEvent.touches[0].clientX
+  })
+
+  $carousel.on('touchmove', function (e) {
+    touchArtEndX = e.originalEvent.touches[0].clientX
+  })
+
+  $carousel.on('touchend', function () {
+    const swipeThreshold = 50
+    const diff = touchArtStartX - touchArtEndX
+
+    if (diff > swipeThreshold) {
+      $('.carousel-arrow.next').click()
+    } else if (diff < -swipeThreshold) {
+      $('.carousel-arrow.prev').click()
+    }
+  })
+
+  $(window).on('resize', function () {
+    updateCarousel(false); // アニメーションなしで再描画
   });
+
+  // 初期位置を1番目（クローン後の2番目）に設定
+  currentArtIndex = 0
+  updateCarousel(false)
   
   $(".view-artist-btn, .gallery-item").click(function () {
     const artistId = $(this).data("artist")
