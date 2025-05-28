@@ -1,8 +1,19 @@
 $(document).ready(() => {
   // ローディングアニメーション
-  setTimeout(() => {
-    $("#loading-animation").fadeOut(1000)
-  }, 3000)
+  const hash = window.location.hash;
+  if (hash) {
+    $("#loading-animation").hide();
+    $(window).scrollTop(0);
+    setTimeout(() => {
+      scrollToSection(hash.substring(1)); // ハッシュがある場合はそのセクションにスクロール
+    }, 100);
+  } else {
+    $("#loading-animation").css("display", "flex");
+    setTimeout(() => {
+      $("#loading-animation").fadeOut(1000,function () {
+      $(this).css("display", "none")});
+    }, 3000);
+  }
 
   // 現在年を設定
   $("#current-year").text(new Date().getFullYear())
@@ -18,24 +29,36 @@ $(document).ready(() => {
     $("body").css("overflow", "")
   })
 
+  // スクロールアニメーション
+  function scrollToSection(sectionId) {
+    const headerHeight = $(".header").height();
+    const section = $("#" + sectionId);
+    if (section.length) {
+      $("html, body").animate(
+        {
+          scrollTop: section.offset().top - headerHeight,
+        },
+        800
+      );
+    }
+  }
+  
   // ナビゲーションリンクのスクロール
-  $(".nav-link, .mobile-nav-link").click(function () {
-    const sectionId = $(this).data("section")
-    const headerHeight = $(".header").height()
+  $(".nav-link, .mobile-nav-link").click(function (e) {
+    const sectionId = $(this).data("section");
+    const currentPage = window.location.pathname;
+
     if (sectionId) {
-      const section = $("#" + sectionId)
-      if (section.length) {
-        $("html, body").animate(
-          {
-            scrollTop: section.offset().top - headerHeight,
-          },
-          800,
-        )
-        $("#mobile-menu").removeClass("active")
-        $("body").css("overflow", "")
+      if (currentPage.endsWith("index.html") || currentPage === "/") {
+        e.preventDefault(); // ページ遷移抑制
+        scrollToSection(sectionId);
+        $("#mobile-menu").removeClass("active");
+        $("body").css("overflow", "");
+      } else {
+        window.location.href = `index.html#${sectionId}`;
       }
     }
-  })
+  });
 
   // ヘッダースタイル変更
   function updateHeaderStyle() {
