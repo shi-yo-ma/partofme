@@ -889,7 +889,7 @@ body {
 
 /* Store Page */
 .store-page main {
-  padding-top: 84px;
+  margin-top: 80px;
 }
 
 .breadcrumb {
@@ -1248,7 +1248,7 @@ body {
 
 /* Contact Page */
 .contact-page main {
-  padding-top: 84px;
+  margin-top: 80px;
 }
 
 .contact-section {
@@ -1680,6 +1680,14 @@ body {
 
   .form-row {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .store-page main {
+    margin-top: 85px;
+  }
+
+  .contact-page main {
+    margin-top: 85px;
   }
 }
 
