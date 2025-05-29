@@ -449,14 +449,15 @@ body {
 }
 
 .section-header h2 {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   margin-bottom: 12px;
+  color: var(--accent-color);
 }
 
 .section-tagline {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   line-height: 1.3;
 }
 
@@ -824,7 +825,7 @@ body {
   position: absolute;
   top: 15px;
   right: 15px;
-  font-size: 20px;
+  font-size: 25px;
   color: var(--light-text);
   transition: var(--transition);
 }
@@ -894,15 +895,14 @@ body {
 
 .breadcrumb {
   background-color: var(--light-bg);
-  padding: 10px 20px;
+  padding: 10px 0px;
 }
 
 .breadcrumb ol {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
   font-size: 14px;
 }
 
@@ -1030,9 +1030,9 @@ body {
 }
 
 .base-link {
-  background-color: #AEE6D2;
+  background-color: #555;
   border: none;
-  color: #333;
+  color: white;
 }
 
 .contact-link {
@@ -1046,7 +1046,8 @@ body {
 }
 
 .base-link:hover {
-  background-color: #4BC9A8;
+  background-color: #333;
+  
 }
 
 .contact-link:hover {
@@ -1063,13 +1064,13 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-evenly;
+  /*gap: 20px;*/
 }
 
 .featured-image {
-  width: 200px;
-  height: 200px;
+  width: clamp(130px, 30vw, 180px);
+  height: clamp(130px, 30vw, 180px);
 }
 
 .flip-container {
@@ -1083,7 +1084,7 @@ body {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  animation: flip 10s infinite;
+  animation: flip 8s infinite;
 }
 
 @keyframes flip {
@@ -1105,7 +1106,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   overflow: hidden;
 }
 
@@ -1127,7 +1128,7 @@ body {
 
 .featured-info p {
   margin-bottom: 20px;
-  font-size: clamp(14px, 2.5vw, 18px);
+  font-size: clamp(8px, 2.2vw, 18px);
 }
 
 .featured-link {
@@ -1136,7 +1137,7 @@ body {
   border: 1px solid var(--primary-color);
   border-radius: 4px;
   transition: var(--transition);
-  font-size: clamp(14px, 2.5vw, 18px);
+  font-size: clamp(10px, 2.5vw, 18px);
 }
 
 .featured-link:hover {
@@ -1225,13 +1226,13 @@ body {
 }
 
 .base-btn {
-  background-color: #AEE6D2;
+  background-color: #555;
   border: none;
-  color: #333;
+  color: white;
 }
 
 .base-btn:hover {
-  background-color: #4BC9A8;
+  background-color: #333;
 }
 
 .product-modal-right h3 {
@@ -1643,16 +1644,16 @@ body {
     max-height: 90vh;
   }
 
+  .modal-close {
+    font-size: 30px;
+  }
+
   .artist-modal-body {
     flex-direction: row;
   }
 
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-  }
-
-  .featured-content {
     gap: 50px;
   }
 
@@ -1802,10 +1803,6 @@ body {
 
   .product-details {
     width: 100%;
-  }
-
-  .featured-content {
-    gap: 150px;
   }
 
   .featured-image {
