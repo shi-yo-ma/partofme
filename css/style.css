@@ -349,7 +349,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 80px;
-  font-family: "游ゴシック";
 }
 
 .concept-text {
@@ -358,6 +357,7 @@ body {
   gap: 25px;
   max-width: 900px;
   margin: 0 auto;
+  font-family: 'Yu Gothic', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Meiryo', sans-serif;
 }
 
 .concept-paragraph {
