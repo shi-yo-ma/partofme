@@ -464,15 +464,15 @@ body {
 /* Page Header */
 
 .page-header h2 {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
   color: var(--accent-color);
 }
 
 .page-tagline {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 1.3;
 }
 
@@ -1129,8 +1129,8 @@ body {
 }
 
 .featured-image {
-  width: clamp(130px, 30vw, 180px);
-  height: clamp(130px, 30vw, 180px);
+  width: clamp(110px, 25vw, 180px);
+  height: clamp(110px, 25vw, 180px);
 }
 
 .flip-container {
@@ -1188,16 +1188,16 @@ body {
 
 .featured-info p {
   margin-bottom: 20px;
-  font-size: clamp(8px, 2.2vw, 18px);
+  font-size: clamp(10px, 2.5vw, 20px);
 }
 
 .featured-link {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 0.5em 1em;
   border: 1px solid var(--primary-color);
   border-radius: 4px;
   transition: var(--transition);
-  font-size: clamp(10px, 2.5vw, 18px);
+  font-size: clamp(1.05px, 2.6vw, 21px);
 }
 
 .featured-link:hover {
@@ -1660,22 +1660,22 @@ body {
   }
 
   .section-header h2 {
-    font-size: 30px;
-    font-weight: 600;
-  }
-
-  .section-tagline {
     font-size: 34px;
     font-weight: 700;
   }
 
+  .section-tagline {
+    font-size: 25px;
+    font-weight: 700;
+  }
+
   .page-header h2 {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 34px;
+    font-weight: 700;
   }
 
   .page-tagline {
-    font-size: 34px;
+    font-size: 25px;
     font-weight: 700;
   }
   
@@ -1808,19 +1808,19 @@ body {
   }
 
   .section-header h2 {
-    font-size: 32px;
+    font-size: 38px;
   }
 
   .section-tagline {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .page-header h2 {
-    font-size: 32px;
+    font-size: 38px;
   }
 
   .page-tagline {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .concept-content {
