@@ -1129,8 +1129,8 @@ body {
 }
 
 .featured-image {
-  width: clamp(110px, 25vw, 180px);
-  height: clamp(110px, 25vw, 180px);
+  width: clamp(100px, 25vw, 180px);
+  height: clamp(110px, 28vw, 180px);
 }
 
 .flip-container {
@@ -1187,8 +1187,8 @@ body {
 }
 
 .featured-info p {
-  margin-bottom: 20px;
-  font-size: clamp(10px, 2.5vw, 20px);
+  margin-bottom: 15px;
+  font-size: clamp(11px, 2.7vw, 19px);
 }
 
 .featured-link {
@@ -1197,7 +1197,7 @@ body {
   border: 1px solid var(--primary-color);
   border-radius: 4px;
   transition: var(--transition);
-  font-size: clamp(1.05px, 2.6vw, 21px);
+  font-size: clamp(1.1px, 2.7vw, 19px);
 }
 
 .featured-link:hover {
