@@ -1198,7 +1198,7 @@ body {
   border: 1px solid var(--primary-color);
   border-radius: 4px;
   transition: var(--transition);
-  font-size: clamp(13px, 3.3vw, 18px);
+  font-size: clamp(14px, 3.4vw, 19px);
 }
 
 .featured-link:hover {
@@ -1215,13 +1215,13 @@ body {
 }
 
 .coming-soon h3 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 5px;
 }
 
 .coming-soon p {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* Product Modal */
@@ -1758,6 +1758,15 @@ body {
     margin-left: 0;
     margin-bottom: 30px;
     font-size: 18px;
+  }
+
+  .coming-soon h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .coming-soon p {
+    font-size: 14px;
   }
 
   .product-modal-body {
