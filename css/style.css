@@ -389,12 +389,11 @@ body {
   position: relative;
   width: clamp(320px, 80vw, 800px);
   margin: 0 auto;
-  aspect-ratio: 1 / 0.8;
+  aspect-ratio: 1 / 0.9;
 }
 
 .concept-image {
   position: absolute;
-  background-color: white;
   overflow: hidden;
 }
 
@@ -406,40 +405,94 @@ body {
 }
 
 .image-1 {
-  top: 0;
-  left: 0;
-  width: 25%;
-  height: 35%;
+  top: 7%;
+  left: 5%;
+  width: 28%;
+  height: auto;
 }
 
 .image-2 {
-  top: 5%;
-  right: 0;
-  width: 20%;
-  height: 30%;
+  top: 0;
+  left: 40%;
+  width: 22%;
+  height: auto;
 }
 
 .image-3 {
-  top: 10%;
-  left: 30%;
-  width: 40%;
-  height: 65%;
-  z-index: 2;
+  top: 19%;
+  left: 45%;
+  width: 25%;
+  height: auto;
 }
 
 .image-4 {
-  bottom: 10%;
-  left: 5%;
-  width: 20%;
-  height: 25%;
+  top: 3%;
+  right: 10%;
+  width: 17%;
+  height: auto;
 }
 
 .image-5 {
+  top: 20%;
+  right: 0;
+  width: 15%;
+  height: auto;
+}
+
+.image-6 {
+  top: 35%;
+  right: 4%;
+  width: 15%;
+  height: auto;
+}
+
+.image-7 {
+  top: 40%;
+  left: 0;
+  width: 25%;
+  height: auto;
+}
+
+.image-8 {
+  top: 33%;
+  left: 30%;
+  width: 44%;
+  height: auto;
+}
+
+.image-9 {
+  bottom: 17%;
+  left: 7%;
+  width: 14%;
+  height: auto;
+}
+
+.image-10 {
+  bottom: 3%;
+  left: 20%;
+  width: 10%;
+  height: auto;
+}
+
+.image-11 {
+  bottom: 5%;
+  left: 35%;
+  width: 13%;
+  height: auto;
+}
+
+.image-12 {
   bottom: 0;
-  right: 5%;
-  width: 30%;
-  height: 35%;
-  z-index: 1;
+  right: 30%;
+  width: 17%;
+  height: auto;
+}
+
+.image-13 {
+  bottom: 10%;
+  right: 3px;
+  width: 22%;
+  height: auto;
 }
 
 /* Section Headers */

@@ -144,7 +144,7 @@ $(document).ready(() => {
 高橋誠氏は、自閉症スペクトラムを持ちながらも、独自の色彩感覚と構図で注目を集めるアーティストです。このトートバッグは、厚手のキャンバス生地を使用し、内側には小物を整理できるポケットを2つ配置しています。
 
 お手入れ方法：手洗い推奨、漂白剤使用不可、アイロン中温可`,
-      image: "images/question5.png",
+      image: "images/question.png",
       amazonUrl: "https://www.amazon.co.jp/",
       baseUrl: "https://base.shop/",
       otherUrl: "contact.html",
