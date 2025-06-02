@@ -1082,13 +1082,15 @@ body {
 }
 
 .amazon-link {
+  font-weight: 500;
   background-color: #f0c14b;
   border: 1px solid #a88734;
-  color: #111;
+  color: #232F3E;
 }
 
 .base-link {
-  background-color: #555;
+  font-weight: 550;
+  background-color: #223238;
   border: none;
   color: white;
 }
@@ -1101,15 +1103,17 @@ body {
 .amazon-link:hover {
   background-color: #e5a93c;
   border-color: #a67700;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .base-link:hover {
-  background-color: #333;
-  
+  background-color: #2e3e44;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-link:hover {
   background-color: #3d8b40;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Featured Product */
@@ -1186,8 +1190,16 @@ body {
 .featured-info p {
   text-align: left;
   margin-left: 50px;
-  margin-bottom: 30px;
   font-size: clamp(13px, 3.3vw, 18px);
+}
+
+.featured-info-bold {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.featured-info-nomal {
+  margin-bottom: 30px;
 }
 
 .featured-link {
@@ -1274,24 +1286,28 @@ body {
 }
 
 .amazon-btn {
+  font-weight: 500;
   background-color: #f0c14b;
   border: 1px solid #a88734;
-  color: #111;
+  color: #232F3E;
 }
 
 .amazon-btn:hover {
   background-color: #e5a93c;
   border-color: #a67700;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .base-btn {
-  background-color: #555;
+  font-weight: 550;
+  background-color: #223238;
   border: none;
   color: white;
 }
 
 .base-btn:hover {
-  background-color: #333;
+  background-color: #2e3e44;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product-modal-right h3 {
@@ -1705,17 +1721,16 @@ body {
 
   .featured-info p {
     margin-left: 0;
-    margin-bottom: 30px;
     font-size: 18px;
   }
 
   .coming-soon h3 {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 5px;
   }
 
   .coming-soon p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .product-modal-body {
@@ -1875,7 +1890,7 @@ body {
   .store-intro {
     padding: 30px 0;
   }
-
+  
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1906,7 +1921,6 @@ body {
   }
 
   .featured-info p {
-    margin-bottom: 35px;
     font-size: 22px;
   }
 

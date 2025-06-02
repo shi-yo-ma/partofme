@@ -109,13 +109,12 @@
             </div>
           </div>
           <div class="featured-info">
-            <p>part of meは、<br>
+            <p class="featured-info-bold">part of meは、<br>
               サウナハットブランドでもければ、<br>
-              画商でもありません。<br>
-              <br>
-              日用品から、街の風景まで、あらゆる場所を。<br>
-              障がい者アートで塗り替えながら、<br>
-              障がいの在り方を塗り替える会社です。</p>
+              画商でもありません。</p>
+            <p class="featured-info-nomal">日用品から、街の風景まで、あらゆる場所を。<br>
+              障がい者アートでぬりかえながら、<br>
+              障がいの在り方をぬりかえる会社です。</p>
             <a href="index.html" class="featured-link">くわしくはこちら</a>
           </div>
         </div>
@@ -125,7 +124,7 @@
     <!-- Coming Soon セクション -->
     <section class="coming-soon">
       <h3>Coming Soon・・・</h3>
-      <p>このサイトも、プロダクトも、絶賛塗り替え中です。</p>
+      <p>このサイトも、プロダクトも、絶賛ぬりかえ中です。</p>
     </section>
   </main>
 
@@ -157,28 +156,8 @@
 
   <!-- 商品詳細モーダル -->
   <div id="product-modal" class="modal">
-    <div class="modal-content product-modal-content">
-      <button class="modal-close"><i class="fas fa-times"></i></button>
-      <div class="modal-header">
-        <h2 id="product-modal-name"></h2>
-        <p id="product-modal-price" class="product-price"></p>
-      </div>
-      <div class="modal-body product-modal-body">
-        <div class="product-modal-left">
-          <div id="product-modal-image" class="product-modal-image"></div>
-          <div class="product-purchase">
-            <h3>購入する</h3>
-            <div class="purchase-buttons">
-              <a href="#" id="amazon-link" target="_blank" rel="noopener noreferrer" class="amazon-btn">Amazon</a>
-              <a href="#" id="base-link" target="_blank" rel="noopener noreferrer" class="base-btn">BASE</a>
-            </div>
-          </div>
-        </div>
-        <div class="product-modal-right">
-          <h3>商品説明</h3>
-          <div id="product-modal-description" class="product-description"></div>
-        </div>
-      </div>
+    <div class="modal-content product-modal-content" id="product-modal-content">
+      <!-- 商品はJavaScriptで動的に生成されます -->
     </div>
   </div>
 

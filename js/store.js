@@ -3,7 +3,7 @@ $(document).ready(() => {
   const products = [
     {
       id: 1,
-      name: "サウナハット（障がい者アート）",
+      name: "サウナハット（untitled）",
       price: "6,380（税込）",
       description: `このサウナハットは、
 『untitled』作：miwa　をデザインに起用し、サウナハットとしては初めての障がい者アートコラボとなります。障がい者の方ならではの優しい安らぎの表現を感じてください。
@@ -132,7 +132,7 @@ $(document).ready(() => {
       otherUrl: "",
     },
     {
-      id: 4,
+      id: 99,
       name: "オリジナルアイテム制作",
       price: "Ask",
       description: `高橋誠氏の色彩豊かなアートをプリントしたトートバッグ。丈夫なキャンバス生地で、日常使いからお出かけまで幅広く活躍します。
@@ -160,7 +160,7 @@ $(document).ready(() => {
     products.forEach((product) => {
       let productCard = '';
 
-      if (product.id === 4) {
+      if (product.id === 99) {
         productCard = `
           <div class="product-card" data-id="${product.id}">
             <div class="question-image">
@@ -171,8 +171,7 @@ $(document).ready(() => {
               <p class="price">¥${product.price}</p>
               <p class="description">${product.description}</p>
               <div class="purchase-links" data-prevent-click="true">
-                <a href="${product.otherUrl}" target="_blank" rel="noopener noreferrer" class="purchase-link contact-link">お問い合わせ</a>
-                
+                <a href="${product.otherUrl}" rel="noopener noreferrer" class="purchase-link contact-link">お問い合わせ</a>
               </div>
             </div>
           </div>
@@ -188,7 +187,7 @@ $(document).ready(() => {
               <p class="price">¥${product.price}</p>
               <p class="description">${product.description}</p>
               <div class="purchase-links" data-prevent-click="true">
-                <a href="${product.amazonUrl}" target="_blank" rel="noopener noreferrer" class="purchase-link amazon-link">Amazon</a>
+                <a href="${product.amazonUrl}" target="_blank" rel="noopener noreferrer" class="purchase-link amazon-link">amazon</a>
                 <a href="${product.baseUrl}" target="_blank" rel="noopener noreferrer" class="purchase-link base-link">BASE</a>
               </div>
             </div>
@@ -215,18 +214,73 @@ $(document).ready(() => {
 
   // 商品詳細モーダルを表示
   function showProductModal(product) {
-    $("#product-modal-name").text(product.name)
-    $("#product-modal-price").text(`¥${product.price}`)
-    $("#product-modal-description").html(product.description.replace(/\n/g, "<br>"))
-    $("#product-modal-image").html(`<img src="${product.image}" alt="${product.name}の写真">`)
-    $("#amazon-link").attr("href", product.amazonUrl)
-    $("#base-link").attr("href", product.baseUrl)
+    const productModalContent = $("#product-modal-content")
+    productModalContent.empty()
+
+    let productModalHtml = '';
+
+    if (product.id === 99) {
+      productModalHtml = `
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <div class="modal-header">
+          <h2 id="product-modal-name">${product.name}</h2>
+          <p id="product-modal-price" class="product-price">¥${product.price}</p>
+        </div>
+        <div class="modal-body product-modal-body">
+          <div class="product-modal-left">
+            <div id="question-image" class="question-image">
+              <img src="${product.image}" alt="${product.name}の写真">
+            </div>
+            <div class="product-purchase">
+              <div class="purchase-buttons">
+                <a href="${product.otherUrl}" rel="noopener noreferrer" class="purchase-link contact-link">お問い合わせ</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-modal-right">
+            <h3>説明</h3>
+            <div id="product-modal-description" class="product-description">
+              ${product.description}
+            </div>
+          </div>
+        </div>
+      `
+    } else {
+      productModalHtml = `
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <div class="modal-header">
+          <h2 id="product-modal-name">${product.name}</h2>
+          <p id="product-modal-price" class="product-price">¥${product.price}</p>
+        </div>
+        <div class="modal-body product-modal-body">
+          <div class="product-modal-left">
+            <div id="product-modal-image" class="product-modal-image">
+              <img src="${product.image}" alt="${product.name}の写真">
+            </div>
+            <div class="product-purchase">
+              <h3>購入する</h3>
+              <div class="purchase-buttons">
+                <a href="${product.amazonUrl}" id="amazon-link" target="_blank" rel="noopener noreferrer" class="amazon-btn">amazon</a>
+                <a href="${product.baseUrl}" id="base-link" target="_blank" rel="noopener noreferrer" class="base-btn">BASE</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-modal-right">
+            <h3>商品説明</h3>
+            <div id="product-modal-description" class="product-description">
+              ${product.description}
+            </div>
+          </div>
+        </div>
+      `
+    }
+    productModalContent.html(productModalHtml)
     $("#product-modal").addClass("active")
     $("body").css("overflow", "hidden")
   }
 
   // モーダルを閉じる
-  $(".modal-close").click(() => {
+  $(document).on("click", ".modal-close", () => {
     $(".modal").removeClass("active")
     $("body").css("overflow", "")
   })
