@@ -550,7 +550,7 @@ body {
 .about-content {
   display: flex;
   flex-direction: column;
-  margin-top: -50px;
+  margin-top: -10px;
 }
 
 .about-image {
@@ -558,7 +558,7 @@ body {
   z-index: 0;
   width: 100%;
   max-width: 800px;
-  margin: 0 auto -20px auto;
+  margin: 0 auto -5px auto;
   overflow: hidden;
 }
 
@@ -588,12 +588,12 @@ body {
 
 .main-text {
   line-height: 1.6;
-  font-size: clamp(9px, 2.3vw, 18px);
+  font-size: clamp(10px, 2.3vw, 18px);
   font-weight: 500;
 }
 
 .last-line {
-  font-size: clamp(7px, 1.8vw, 14px);
+  font-size: clamp(8px, 1.9vw, 14px);
   color: #666;
   margin-top: 5px;
 }
@@ -1735,7 +1735,7 @@ body {
   }
 
   .about-content {
-    margin-top: -70px;
+    margin-top: -20px;
   }
 
   .about-image {
