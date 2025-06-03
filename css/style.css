@@ -352,7 +352,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 80px;
-  margin-top: 85px;
 }
 
 .concept-text {
@@ -588,7 +587,7 @@ body {
 
 .main-text {
   line-height: 1.6;
-  font-size: clamp(10px, 2.3vw, 18px);
+  font-size: clamp(9px, 2.3vw, 18px);
   font-weight: 500;
 }
 
