@@ -413,41 +413,41 @@ body {
 
 .image-2 {
   top: 0;
-  left: 40%;
-  width: 22%;
+  left: 37%;
+  width: 23%;
   height: auto;
 }
 
 .image-3 {
-  top: 19%;
-  left: 45%;
-  width: 25%;
+  top: 20%;
+  left: 42%;
+  width: 23%;
   height: auto;
 }
 
 .image-4 {
-  top: 3%;
-  right: 10%;
-  width: 17%;
-  height: auto;
-}
-
-.image-5 {
-  top: 20%;
+  top: 21%;
   right: 0;
   width: 15%;
   height: auto;
 }
 
+.image-5 {
+  top: 37%;
+  right: 11%;
+  width: 14%;
+  height: auto;
+}
+
 .image-6 {
-  top: 35%;
-  right: 4%;
-  width: 15%;
+  top: 46%;
+  right: 0%;
+  width: 14%;
   height: auto;
 }
 
 .image-7 {
-  top: 40%;
+  top: 35%;
   left: 0;
   width: 25%;
   height: auto;
@@ -455,22 +455,15 @@ body {
 
 .image-8 {
   top: 33%;
-  left: 30%;
+  left: 29%;
   width: 44%;
   height: auto;
 }
 
 .image-9 {
-  bottom: 17%;
-  left: 7%;
-  width: 14%;
-  height: auto;
-}
-
-.image-10 {
   bottom: 3%;
-  left: 20%;
-  width: 10%;
+  left: 15%;
+  width: 14%;
   height: auto;
 }
 
@@ -489,9 +482,23 @@ body {
 }
 
 .image-13 {
-  bottom: 10%;
-  right: 3px;
-  width: 22%;
+  bottom: 7%;
+  right: 4%;
+  width: 19%;
+  height: auto;
+}
+
+.image-14 {
+  top: 6%;
+  right: 18%;
+  width: 15%;
+  height: auto;
+}
+
+.image-15 {
+  bottom: 22%;
+  left: 3%;
+  width: 20%;
   height: auto;
 }
 
@@ -545,7 +552,7 @@ body {
 
 .about-image {
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -572,6 +579,7 @@ body {
 }
 
 .main-text {
+  line-height: 1.6;
   font-size: clamp(8px, 2.2vw, 16px);
   font-weight: 500;
 }
@@ -1714,6 +1722,18 @@ body {
     width: 600px;
   }
 
+  .first-line {
+    font-size: 22px;
+  }
+
+  .main-text {
+    font-size: 17px;
+  }
+
+  .last-line {
+    font-size: 14px;
+  }
+
   .pickup-content {
     flex-direction: row;
     align-items: center;
@@ -1905,6 +1925,29 @@ body {
 
   .concept-images {
     width: 500px;
+  }
+
+  .about-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .about-image {
+    width: 50%;
+  }
+
+  .first-line {
+    font-size: clamp(16px, 1.6vw, 24px);
+  }
+
+  .main-text {
+    font-size: clamp(12px, 1.2vw, 18px);
+  }
+
+  .last-line {
+    font-size: clamp(10px, 1vw, 15px);
   }
 
    .sauna-hat-container {
