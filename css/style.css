@@ -583,13 +583,17 @@ body {
 .first-line {
   font-size: clamp(12px, 3vw, 24px);
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .main-text {
   line-height: 1.6;
   font-size: clamp(10px, 2.3vw, 18px);
   font-weight: 500;
+}
+
+.main-text-first {
+  margin-bottom: 5px;
 }
 
 .last-line {
@@ -1749,14 +1753,20 @@ body {
 
   .first-line {
     font-size: 22px;
+    margin-bottom: 10px;
   }
 
   .main-text {
     font-size: 17px;
   }
 
+  .main-text-first {
+    margin-bottom: 7px;
+  }
+
   .last-line {
     font-size: 14px;
+    margin-top: 7px;
   }
 
   .pickup-content {
@@ -1955,19 +1965,25 @@ body {
   }
 
   .about-image {
-    margin: 0 auto -60px auto;
+    margin: 0 auto -50px auto;
   }
 
   .first-line {
-    font-size: 22px;
+    font-size: 25px;
+    margin-bottom: 15px;
   }
 
   .main-text {
     font-size: 20px;
   }
 
+  .main-text-first {
+    margin-bottom: 10px;
+  }
+
   .last-line {
     font-size: 16px;
+    margin-top: 10px;
   }
 
    .sauna-hat-container {
