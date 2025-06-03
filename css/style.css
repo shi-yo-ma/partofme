@@ -392,7 +392,7 @@ body {
 
 .concept-images {
   position: relative;
-  width: clamp(320px, 80vw, 800px);
+  width: 100%;
   margin: 0 auto;
   aspect-ratio: 1 / 0.9;
 }
@@ -447,7 +447,7 @@ body {
 .image-6 {
   top: 46%;
   right: 0%;
-  width: 14%;
+  width: 13%;
   height: auto;
 }
 
@@ -466,7 +466,7 @@ body {
 }
 
 .image-9 {
-  bottom: 3%;
+  bottom: 2%;
   left: 15%;
   width: 14%;
   height: auto;
@@ -501,7 +501,7 @@ body {
 }
 
 .image-15 {
-  bottom: 22%;
+  bottom: 20%;
   left: 3%;
   width: 20%;
   height: auto;
@@ -585,7 +585,7 @@ body {
 
 .main-text {
   line-height: 1.6;
-  font-size: clamp(8px, 2.2vw, 16px);
+  font-size: clamp(10px, 2.2vw, 16px);
   font-weight: 500;
 }
 
