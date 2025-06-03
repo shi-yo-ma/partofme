@@ -580,14 +580,14 @@ body {
 }
 
 .first-line {
-  font-size: clamp(12px, 3vw, 24px);
+  font-size: clamp(13px, 3.3vw, 26px);
   font-weight: bold;
   margin-bottom: 7px;
 }
 
 .main-text {
   line-height: 1.6;
-  font-size: clamp(9px, 2.3vw, 18px);
+  font-size: clamp(10px, 2.6vw, 22px);
   font-weight: 500;
 }
 
@@ -596,7 +596,7 @@ body {
 }
 
 .last-line {
-  font-size: clamp(8px, 1.9vw, 14px);
+  font-size: clamp(8px, 2.1vw, 16px);
   color: #666;
   margin-top: 5px;
 }
