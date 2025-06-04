@@ -689,7 +689,7 @@ body {
 
 .pickup-info {
   max-width: 500px;
-  padding: 15px;
+  padding: 10px;
   border: 2px dashed #ccc;
   display: flex;
   flex-direction: column;
@@ -699,14 +699,15 @@ body {
 
 .pickup-info p {
   margin-bottom: 15px;
-  font-size: clamp(12px, 3vw, 16px);
+  font-size: clamp(13px, 3.3vw, 16px);
+  line-height: 1.8;
   color: var(--light-text);
 }
 
 .pickup-link {
   display: inline-block;
   padding: 0.5em 1em;
-  font-size: clamp(13px, 3.3vw, 17px);
+  font-size: clamp(14px, 3.6vw, 17px);
   background-color: var(--accent-color);
   color: white;
   border-radius: 4px;
@@ -2038,7 +2039,6 @@ body {
   .pickup-info p {
     margin-bottom: 30px;
     font-size: 22px;
-    line-height: 1.8;
   }
 
   .pickup-link {
