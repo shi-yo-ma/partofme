@@ -830,12 +830,12 @@ body {
 .art-title {
   margin: 10px 0;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
 }
 
 .view-artist-btn {
-  font-size: 14px;
+  font-size: 13px;
   padding: 0.5em 1em;
   border: none;
   background-color: var(--primary-color);
@@ -845,16 +845,16 @@ body {
 }
 
 .carousel-arrow {
-  display: block;
+  display: none;
   position: absolute;
-  top: 35%;
+  top: 40%;
   background: rgba(0, 0, 0, 0.5);
   border: none;
-  font-size: 24px;
+  font-size: 32px;
   cursor: pointer;
   color: white;
   transition: color 0.3s;
-  padding: 6px 9px;
+  padding: 8px 12px;
   border-radius: 30px;
   z-index: 3;
 }
@@ -1816,10 +1816,7 @@ body {
   }
 
   .carousel-arrow {
-    top: 40%;
-    font-size: 32px;
-    padding: 8px 12px;
-    border-radius: 30px;
+    display: block;
   }
 
   .modal-content {
