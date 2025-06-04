@@ -135,15 +135,9 @@ $(document).ready(() => {
       id: 99,
       name: "オリジナルアイテム制作",
       price: "Ask",
-      description: `高橋誠氏の色彩豊かなアートをプリントしたトートバッグ。丈夫なキャンバス生地で、日常使いからお出かけまで幅広く活躍します。
-
-【アーティスト】高橋誠
-【素材】綿100%（厚手キャンバス）
-【サイズ】幅40cm × 高さ35cm × マチ15cm、持ち手の長さ：約60cm
-
-高橋誠氏は、自閉症スペクトラムを持ちながらも、独自の色彩感覚と構図で注目を集めるアーティストです。このトートバッグは、厚手のキャンバス生地を使用し、内側には小物を整理できるポケットを2つ配置しています。
-
-お手入れ方法：手洗い推奨、漂白剤使用不可、アイロン中温可`,
+      description: `弊社は、商品パッケージから、壁、サウナハットまで、色々な物をぬりかえてきました。
+アートを扱うが故に、ぬりかえることが不可能な物はないと信じています。
+もしぬりかえたかったり、アートの力を借りたい時はお気軽にご相談ください。`,
       image: "images/question.png",
       amazonUrl: "https://www.amazon.co.jp/",
       baseUrl: "https://base.shop/",
@@ -228,7 +222,7 @@ $(document).ready(() => {
         </div>
         <div class="modal-body product-modal-body">
           <div class="product-modal-left">
-            <div id="question-image" class="question-image">
+            <div id="question-image" class="question-image question-modal-image">
               <img src="${product.image}" alt="${product.name}の写真">
             </div>
             <div class="product-purchase">

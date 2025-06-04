@@ -364,7 +364,7 @@ body {
 }
 
 .concept-paragraph {
-  font-weight: 700;
+  font-weight: 600;
   font-size: clamp(13px, 3.3vw, 18px);
   line-height: 1.6;
 }
@@ -423,7 +423,7 @@ body {
 }
 
 .image-3 {
-  bottom: 9%;
+  bottom: 7%;
   left: 7%;
   width: 38%;
   height: auto;
@@ -1333,6 +1333,10 @@ body {
   object-position: center;
 }
 
+.question-modal-image {
+  width: 100%;
+}
+
 .product-purchase h3 {
   font-size: 18px;
   font-weight: 600;
@@ -1718,6 +1722,7 @@ body {
   }
   
   .concept-paragraph {
+    font-weight: 700;
     font-size: 20px;
   }
 
