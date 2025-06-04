@@ -418,14 +418,14 @@ body {
 .image-2 {
   top: 0;
   left: 37%;
-  width: 23%;
+  width: 21%;
   height: auto;
 }
 
 .image-3 {
-  top: 20%;
-  left: 42%;
-  width: 23%;
+  bottom: 9%;
+  left: 7%;
+  width: 38%;
   height: auto;
 }
 
@@ -451,8 +451,8 @@ body {
 }
 
 .image-7 {
-  top: 35%;
-  left: 0;
+  bottom: 0;
+  right: 25%;
   width: 25%;
   height: auto;
 }
@@ -464,24 +464,10 @@ body {
   height: auto;
 }
 
-.image-9 {
-  bottom: 2%;
-  left: 15%;
-  width: 14%;
-  height: auto;
-}
-
 .image-11 {
-  bottom: 5%;
-  left: 35%;
-  width: 13%;
-  height: auto;
-}
-
-.image-12 {
-  bottom: 0;
-  right: 30%;
-  width: 17%;
+  top: 2%;
+  right: 16%;
+  width: 16%;
   height: auto;
 }
 
@@ -493,16 +479,16 @@ body {
 }
 
 .image-14 {
-  top: 6%;
-  right: 18%;
+  top: 18%;
+  left: 48%;
   width: 15%;
   height: auto;
 }
 
 .image-15 {
-  bottom: 20%;
-  left: 3%;
-  width: 20%;
+  top: 42%;
+  left: 0;
+  width: 26%;
   height: auto;
 }
 
@@ -774,8 +760,7 @@ body {
   margin-bottom: 8px;
 }
 
-.news-summary {
-  font-size: 12px;
+.news-content .news-detail {
   display: none;
 }
 
@@ -825,7 +810,6 @@ body {
 .gallery-slide img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
 }
 
 .art-title {
@@ -976,8 +960,8 @@ body {
 }
 
 .modal-image {
-  width: 100%;
   aspect-ratio: 16 / 9;
+  width: 100%;
   border-radius: var(--border-radius);
   overflow: hidden;
   margin-bottom: 20px;
@@ -991,7 +975,7 @@ body {
 }
 
 .modal-text {
-  white-space: pre  -line;
+  white-space: pre-line;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -1832,6 +1816,14 @@ body {
     flex-direction: row;
   }
 
+  .artist-modal-image {
+    width:45%;
+  }
+
+  .artist-info {
+    width: 55%;
+  }
+
   .store-intro {
     padding: 25px 0;
   }
@@ -2045,8 +2037,16 @@ body {
     display: inline-block;
   }
 
-  .news-summary {
+  .news-content  .news-detail {
     display: block;
+    font-size: 12px;
+    color: var(--light-text);
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
   }
 
   .store-intro {
