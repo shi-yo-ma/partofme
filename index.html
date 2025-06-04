@@ -215,14 +215,8 @@
             <div class="concept-image image-8">
               <img src="images/concept-image8.jpg" alt="コンセプト8">
             </div>
-            <div class="concept-image image-9">
-              <img src="images/concept-image9.jpg" alt="コンセプト9">
-            </div>
             <div class="concept-image image-11">
               <img src="images/concept-image11.jpg" alt="コンセプト11">
-            </div>
-            <div class="concept-image image-12">
-              <img src="images/concept-image12.jpg" alt="コンセプト12">
             </div>
             <div class="concept-image image-13">
               <img src="images/concept-image13.jpg" alt="コンセプト13">
@@ -303,74 +297,8 @@
         <div class="section-header">
           <h2>News</h2>
         </div>
-
-        <div class="news-grid">
-          <!-- ニュース記事 -->
-          <div class="news-item" data-id="1">
-            <div class="news-image">
-              <img src="images/top1.jpg" alt="新商品発売のお知らせ">
-            </div>
-            <div class="news-content">
-              <h3>新商品発売のお知らせ</h3>
-              <p class="news-date">2023.12.15</p>
-              <p class="news-summary">障がい者アーティスト5名の作品をデザインに取り入れた新商品ラインナップを発表しました。</p>
-            </div>
-          </div>
-
-          <div class="news-item" data-id="2">
-            <div class="news-image">
-              <img src="images/top2.jpg" alt="展示会開催のお知らせ">
-            </div>
-            <div class="news-content">
-              <h3>展示会開催のお知らせ</h3>
-              <p class="news-date">2023.11.20</p>
-              <p class="news-summary">東京・大阪・福岡の3都市で「障がい者アート展2023」を開催します。</p>
-            </div>
-          </div>
-
-          <div class="news-item" data-id="3">
-            <div class="news-image">
-              <img src="images/top3.jpg" alt="コラボレーション商品発売">
-            </div>
-            <div class="news-content">
-              <h3>コラボレーション商品発売</h3>
-              <p class="news-date">2023.10.05</p>
-              <p class="news-summary">国内大手アパレルブランドとのコラボレーションによる限定Tシャツが発売されました。</p>
-            </div>
-          </div>
-
-          <div class="news-item" data-id="4">
-            <div class="news-image">
-              <img src="images/top4.jpg" alt="アートワークショップ開催">
-            </div>
-            <div class="news-content">
-              <h3>アートワークショップ開催</h3>
-              <p class="news-date">2023.09.10</p>
-              <p class="news-summary">障がい者アーティストによるワークショップを全国5都市で開催します。</p>
-            </div>
-          </div>
-
-          <div class="news-item" data-id="5">
-            <div class="news-image">
-              <img src="images/top5.jpg" alt="新規アーティスト募集">
-            </div>
-            <div class="news-content">
-              <h3>新規アーティスト募集</h3>
-              <p class="news-date">2023.08.20</p>
-              <p class="news-summary">Part of Meでは、新たに活動を共にする障がい者アーティストを募集しています。</p>
-            </div>
-          </div>
-
-          <div class="news-item" data-id="6">
-            <div class="news-image">
-              <img src="images/top1.jpg" alt="海外展示会参加決定">
-            </div>
-            <div class="news-content">
-              <h3>海外展示会参加決定</h3>
-              <p class="news-date">2023.07.15</p>
-              <p class="news-summary">ニューヨークで開催される国際障がい者アート展に、Part of Meのアーティスト3名が招待されました。</p>
-            </div>
-          </div>
+        <div class="news-grid" id="news-container">
+          <!-- ニュース記事はJavaScriptで動的に生成されます -->
         </div>
       </div>
     </section>
@@ -388,41 +316,41 @@
           <div class="gallery-carousel-wrapper">
             <button class="carousel-arrow prev">&#9664;</button>
             <div class="gallery-carousel">
-              <div class="gallery-slide active">
-                <img src="images/top1.jpg" alt="色彩の世界 - 山田太郎作">
-                <p class="art-title">色彩の世界</p>
-                <button class="view-artist-btn" data-artist="1">
-                  <i class="fas fa-info-circle"></i>
-                  アーティストを見る
-                </button>
-              </div>
               <div class="gallery-slide">
-                <img src="images/top2.jpg" alt="眼鏡の少年 - 佐藤花子作">
-                <p class="art-title">眼鏡の少年</p>
-                <button class="view-artist-btn" data-artist="2">
-                  <i class="fas fa-info-circle"></i>
-                  アーティストを見る
-                </button>
-              </div>
-              <div class="gallery-slide">
-                <img src="images/top3.jpg" alt="光と影の交差 - 鈴木一郎作">
-                <p class="art-title">光と影の交差</p>
-                <button class="view-artist-btn" data-artist="3">
-                  <i class="fas fa-info-circle"></i>
-                  アーティストを見る
-                </button>
-              </div>
-              <div class="gallery-slide">
-                <img src="images/top4.jpg" alt="日常の風景 - 中村洋子作">
-                <p class="art-title">日常の風景</p>
+                <img src="images/top4.jpg" alt="スマートフォンで遊んだ思い出-よしけん作">
+                <p class="art-title">スマートフォンで遊んだ思い出</p>
                 <button class="view-artist-btn" data-artist="4">
                   <i class="fas fa-info-circle"></i>
                   アーティストを見る
                 </button>
               </div>
               <div class="gallery-slide">
-                <img src="images/top5.jpg" alt="抽象的な感情 - 田中誠作">
-                <p class="art-title">抽象的な感情</p>
+                <img src="images/top3.jpg" alt="はせがわたくみ作">
+                <p class="art-title"></p>
+                <button class="view-artist-btn" data-artist="3">
+                  <i class="fas fa-info-circle"></i>
+                  アーティストを見る
+                </button>
+              </div>
+              <div class="gallery-slide active">
+                <img src="images/top1.jpg" alt="">
+                <p class="art-title"></p>
+                <button class="view-artist-btn" data-artist="1">
+                  <i class="fas fa-info-circle"></i>
+                  アーティストを見る
+                </button>
+              </div>
+              <div class="gallery-slide">
+                <img src="images/top2.jpg" alt="">
+                <p class="art-title"></p>
+                <button class="view-artist-btn" data-artist="2">
+                  <i class="fas fa-info-circle"></i>
+                  アーティストを見る
+                </button>
+              </div>
+              <div class="gallery-slide">
+                <img src="images/top5.jpg" alt="">
+                <p class="art-title"></p>
                 <button class="view-artist-btn" data-artist="5">
                   <i class="fas fa-info-circle"></i>
                   アーティストを見る
@@ -472,8 +400,8 @@
         <p id="news-modal-date" class="modal-date"></p>
       </div>
       <div class="modal-body">
-        <div id="news-modal-image" class="modal-image"></div>
-        <div id="news-modal-content" class="modal-text"></div>
+        <div id="news-modal-image" class="modal-image news-modal-image"></div>
+        <div id="news-modal-detail" class="modal-text"></div>
       </div>
     </div>
   </div>
@@ -486,7 +414,7 @@
         <h2 id="artist-modal-name"></h2>
       </div>
       <div class="modal-body artist-modal-body">
-        <div id="artist-modal-portrait" class="modal-image"></div>
+        <div id="artist-modal-portrait" class="modal-image artist-modal-image"></div>
         <div class="artist-info">
           <h3>アーティストプロフィール</h3>
           <p id="artist-modal-bio"></p>
