@@ -306,7 +306,7 @@ $('.sauna-hat-container').on('click', function () {
     },
     {
       id: 3,
-      title: "~Aloha eha festival~ 2024に参加に、企画・出店しました。",
+      title: "~Aloha eha festival~ 2024に参加し、企画・出店しました。",
       date: "R6.4.28~4.29",
       image: "images/pressrelease4.jpg",
       detail: `例年開催しており、コロナも明け益々盛り上がるアロハエハーフェスティバルにお誘い頂き、参加し、企画・出店いたしました。
