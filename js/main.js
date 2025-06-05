@@ -400,13 +400,13 @@ story of cheesecakeはこちら
   const artistData = [
     {
       id: 1,
-      name: "",
+      name: "　　",
       portrait: "images/no_image.png",
       bio: `プロフィール、準備中です。`,
     },
     {
       id: 2,
-      name: "",
+      name: "　　",
       portrait: "images/no_image.png",
       bio: `プロフィール、準備中です。`,
     },
@@ -430,7 +430,7 @@ story of cheesecakeはこちら
     },
     {
       id: 5,
-      name: "",
+      name: "　　",
       portrait: "images/no_image.png",
       bio:  `プロフィール、準備中です。`,
     },
