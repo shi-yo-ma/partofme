@@ -1551,7 +1551,7 @@ body {
 }
 
 .form-success h3 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -1894,6 +1894,10 @@ body {
 
   .contact-info h3 {
     font-size: 21px;
+  }
+
+  .form-success h3 {
+    font-size: 20px;
   }
 
   .form-row {
