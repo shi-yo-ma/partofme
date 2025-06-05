@@ -141,7 +141,7 @@ body {
 
 .header-btn {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 0.5em 1em;
   border: 1px solid var(--primary-color);
   border-radius: 4px;
   font-size: 12px;
