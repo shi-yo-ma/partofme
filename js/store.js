@@ -42,7 +42,7 @@ $(document).ready(() => {
 ・使用しない時は、乾燥した場所で保管してください。
 
 ショップのお問い合わせから、ご不明な点やご質問がございましたらお気軽にご連絡ください。心を込めたサウナライフをお楽しみください。`,
-      image: "images/saunahat_art-removebg.png",
+      image: "images/saunahat_art-removebg.webp",
       amazonUrl: "https://amzn.asia/d/9XFrOBZ",
       baseUrl: "https://partofme.official.ec/items/98905614",
       otherUrl: "",
@@ -84,7 +84,7 @@ $(document).ready(() => {
 ・使用しない時は、乾燥した場所で保管してください。
 
 ショップのお問い合わせから、ご不明な点やご質問がございましたらお気軽にご連絡ください。心を込めたサウナライフをお楽しみください。`,
-      image: "images/saunahat_black-removebg.png",
+      image: "images/saunahat_black-removebg.webp",
       amazonUrl: "https://amzn.asia/d/gxpl0aC",
       baseUrl: "https://partofme.official.ec/items/98905355",
       otherUrl: "",
@@ -126,7 +126,7 @@ $(document).ready(() => {
 ・使用しない時は、乾燥した場所で保管してください。
 
 ショップのお問い合わせから、ご不明な点やご質問がございましたらお気軽にご連絡ください。心を込めたサウナライフをお楽しみください。`,
-      image: "images/saunahat_beige-removebg.png",
+      image: "images/saunahat_beige-removebg.webp",
       amazonUrl: "https://amzn.asia/d/ijDNNZN",
       baseUrl: "https://partofme.official.ec/items/98905914",
       otherUrl: "",
@@ -138,7 +138,7 @@ $(document).ready(() => {
       description: `弊社は、商品パッケージから、壁、サウナハットまで、色々な物をぬりかえてきました。
 アートを扱うが故に、ぬりかえることが不可能な物はないと信じています。
 もしぬりかえたかったり、アートの力を借りたい時はお気軽にご相談ください。`,
-      image: "images/question.png",
+      image: "images/question.webp",
       amazonUrl: "https://www.amazon.co.jp/",
       baseUrl: "https://base.shop/",
       otherUrl: "contact.html",

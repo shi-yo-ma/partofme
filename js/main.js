@@ -72,15 +72,15 @@ $(document).ready(() => {
       const heroBottom = $(".hero-slider").offset().top + heroHeight
       if (heroBottom - scrollTop <= headerCenter || window.innerWidth < 768) {
         $("#header").addClass("header-white")
-        $("#header-logo").attr("src", "images/partofme_logo_black.png")
+        $("#header-logo").attr("src", "images/partofme_logo_black.webp")
       } else {
         $("#header").removeClass("header-white")
-        $("#header-logo").attr("src", "images/partofme_logo_white.png")
+        $("#header-logo").attr("src", "images/partofme_logo_white.webp")
       }
     } else {
       // 他のページの場合
       $("#header").addClass("header-white")
-      $("#header-logo").attr("src", "images/partofme_logo_black.png")
+      $("#header-logo").attr("src", "images/partofme_logo_black.webp")
     }
   }
 
@@ -275,7 +275,7 @@ $('.sauna-hat-container').on('click', function () {
       id: 6,
       title: "webサイトをリニューアルしました。",
       date: "R7.06.01",
-      image: "images/pressrelease1.jpg",
+      image: "images/pressrelease1.webp",
       detail: `この度、長らく準備を進めておりましたWebサイトのリニューアルが完了し、本日公開いたしましたことをご報告いたします。今回のリニューアルでは、デザインの一新はもちろんのこと、コンテンツの見直しや構成の変更を行い、より快適に、そしてより便利にご利用いただけるWebサイトを目指しました。
 
 今回のリニューアルを通じて、皆様にPOM webをより身近に感じていただき、より一層ご満足いただけるよう努めてまいります。今後とも、変わらぬご愛顧を賜りますようお願い申し上げます。`,
@@ -284,7 +284,7 @@ $('.sauna-hat-container').on('click', function () {
       id: 5,
       title: "サウナ施設×アートギャラリーという新たな取り組み",
       date: "R6.11.30~12.1",
-      image: "images/pressrelease2.jpg",
+      image: "images/pressrelease2.webp",
       detail: `この度、愛媛県松山市にある「SAUNA ALKU」様と協力し、障がい者アート×サウナという新たな取り組みをしました。
 そして、アートをご提供してくださったのは、「インクルーシヴ松山　ヒカリのアトリエ」様です。
 アートを求めてお越しになられた方、サウナを求めてお越しになられた方の双方にお互いの魅力を感じてもらえるイベントとなりました。
@@ -296,7 +296,7 @@ $('.sauna-hat-container').on('click', function () {
       id: 4,
       title: "障がい者アート×サウナハットという、未だ世の中にないアイテム制作！",
       date: "R6.11.25",
-      image: "images/pressrelease3.jpg",
+      image: "images/pressrelease3.webp",
       detail: `この度、サウナハットに障がい者アートを施し、サウナの中でも外でも、見て楽しい・被って楽しいアイテムを制作しました。
 こちらにプリントしているのは、
 「untitled」という作品で、「インクルーシヴ松山　ヒカリのアトリエ」に通うmiwaというアーティストにより描かれたものです。 
@@ -308,7 +308,7 @@ $('.sauna-hat-container').on('click', function () {
       id: 3,
       title: "~Aloha eha festival~ 2024に参加し、企画・出店しました。",
       date: "R6.4.28~4.29",
-      image: "images/pressrelease4.jpg",
+      image: "images/pressrelease4.webp",
       detail: `例年開催しており、コロナも明け益々盛り上がるアロハエハーフェスティバルにお誘い頂き、参加し、企画・出店いたしました。
 青空の下でアートギャラリーを行い、沢山の方にアートをみていただくことが出来ました。
 
@@ -329,7 +329,7 @@ $('.sauna-hat-container').on('click', function () {
       id: 2,
       title: "砥部焼（伝統工芸品）×障がい者アートという取り組みと課題",
       date: "R6.4.10",
-      image: "images/pressrelease5.jpg",
+      image: "images/pressrelease5.webp",
       detail: `「インクルーシヴ松山」様に依頼し、そこに通う障がい者さんに砥部焼（伝統工芸品）にデザインをてもらいました。
 こちらを作った理由としては、世の中になかったものづくり、はもちろん、これを機に砥部焼に興味をもってもらい、窯元の雇用を増やしたいという思いからでした。
 愛媛県民には親しみ深い、綺麗な藍色と、割れにくく丈夫な素材。
@@ -341,7 +341,7 @@ $('.sauna-hat-container').on('click', function () {
       id: 1,
       title: "Story of cheesecake様とのコラボパッケージをリリースしました。",
       date: "R6.4.26",
-      image: "images/pressrelease6.jpg",
+      image: "images/pressrelease6.webp",
       detail: `LANTANA FOOD SERVICE株式会社とインクルーシヴ松山とコラボし、
 「story of cheesecake」のチーズケーキと愛媛県産をイメージしたパッケージを制作しました。
 
@@ -401,19 +401,19 @@ story of cheesecakeはこちら
     {
       id: 1,
       name: "　　",
-      portrait: "images/no_image.png",
+      portrait: "images/no_image.webp",
       bio: `プロフィール、準備中です。`,
     },
     {
       id: 2,
       name: "　　",
-      portrait: "images/no_image.png",
+      portrait: "images/no_image.webp",
       bio: `プロフィール、準備中です。`,
     },
     {
       id: 3,
       name: "はせがわたくみ",
-      portrait: "images/artist-hasegawa.jpg",
+      portrait: "images/artist-hasegawa.webp",
       bio: `重度知的障がいを伴う自閉症。
       小さい頃から絵を描くことが好きで、キャラクターから展開した自分の絵を作り上げ、日々の出来事もまじえた表情豊かな絵を描くようになりました。
       たくみの絵で多くの人々が笑顔になるとうれしいです。
@@ -422,7 +422,7 @@ story of cheesecakeはこちら
     {
       id: 4,
       name: "よしけん",
-      portrait: "images/artist-yoshiken.jpg",
+      portrait: "images/artist-yoshiken.webp",
       bio:  `絵を描くことがとにかく好きで、特に過去に出会った人々の絵や実際の場面を描く。
       人との会話や交流も大好き。
       本人曰く”ものまね”という独特のコミュニケーション方法で会話することが多い。
@@ -431,7 +431,7 @@ story of cheesecakeはこちら
     {
       id: 5,
       name: "　　",
-      portrait: "images/no_image.png",
+      portrait: "images/no_image.webp",
       bio:  `プロフィール、準備中です。`,
     },
   ]
