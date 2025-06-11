@@ -29,6 +29,23 @@ $(document).ready(() => {
     $("body").css("overflow", "")
   })
 
+  // 1. 監視対象の全要素を取得
+  const targets = document.querySelectorAll('.fade-in-target');
+  // 2. Intersection Observer のコールバック関数
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      // 要素が表示領域に入ったら
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in-visible'); // 表示クラスを追加
+        observer.unobserve(entry.target); // 一度表示したら監視をやめる（任意）
+      }
+    });
+  }, {
+    threshold: 0.1 // 10%が見えたら発動
+  });
+  // 3. 監視開始
+  targets.forEach(target => observer.observe(target));
+
   // スクロールアニメーション
   function scrollToSection(sectionId) {
     const headerHeight = $(".header").height();

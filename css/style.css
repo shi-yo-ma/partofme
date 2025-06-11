@@ -335,6 +335,19 @@ body {
   display: none;
 }
 
+/* section */
+.fade-in-target {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* Concept Section */
 .concept-section {
   width: 100%;
@@ -767,7 +780,7 @@ body {
 /* Gallery Section */
 .gallery-section {
   padding: 40px 0;
-  background-image: url('../images/tesainsuhesu-zhitekusucha-bei-jing.webp');
+  background-image: url('../images/tesainsuhesu-zhitekusucha-bei-jing.webP');
   position: relative;
 }
 
