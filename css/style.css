@@ -597,7 +597,7 @@ body {
 .last-line {
   font-size: clamp(9px, 2.4vw, 15px);
   color: #666;
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 /* Product Section */
@@ -1759,7 +1759,7 @@ body {
 
   .first-line {
     font-size: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .main-text {
@@ -1767,12 +1767,12 @@ body {
   }
 
   .main-text-first {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
   }
 
   .last-line {
     font-size: 14px;
-    margin-top: 7px;
+    margin-top: 15px;
   }
 
   .pickup-content {
@@ -2006,20 +2006,14 @@ body {
 
   .first-line {
     font-size: 25px;
-    margin-bottom: 15px;
   }
 
   .main-text {
     font-size: 20px;
   }
 
-  .main-text-first {
-    margin-bottom: 10px;
-  }
-
   .last-line {
     font-size: 16px;
-    margin-top: 10px;
   }
 
    .sauna-hat-container {
