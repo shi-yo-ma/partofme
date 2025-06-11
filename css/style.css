@@ -545,14 +545,6 @@ body {
   background-color: var(--light-bg);
 }
 
-.about-container{
-  padding: 0 10px;
-}
-
-.about-header {
-  padding: 0 10px;
-}
-
 .about-content {
   display: flex;
   flex-direction: column;
@@ -565,7 +557,6 @@ body {
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-  padding: 0 10px;
   overflow: hidden;
 }
 
@@ -588,14 +579,14 @@ body {
 }
 
 .first-line {
-  font-size: clamp(14px, 3.6vw, 22px);
+  font-size: clamp(13px, 3.7vw, 24px);
   font-weight: bold;
-  margin-bottom: 7px;
+  margin-bottom: 15px;
 }
 
 .main-text {
-  line-height: 1.6;
-  font-size: clamp(11.1px, 2.83vw, 17px);
+  line-height: 1.8;
+  font-size: clamp(10px, 2.8vw, 18px);
   font-weight: 500;
 }
 
@@ -604,9 +595,9 @@ body {
 }
 
 .last-line {
-  font-size: clamp(9px, 2.3vw, 14px);
+  font-size: clamp(9px, 2.4vw, 15px);
   color: #666;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 /* Product Section */
@@ -780,7 +771,7 @@ body {
 /* Gallery Section */
 .gallery-section {
   padding: 40px 0;
-  background-image: url('../images/tesainsuhesu-zhitekusucha-bei-jing.webP');
+  background-image: url('../images/tesainsuhesu-zhitekusucha-bei-jing.webp');
   position: relative;
 }
 
