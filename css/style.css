@@ -379,7 +379,7 @@ body {
 .concept-paragraph {
   font-weight: 570;
   font-size: clamp(13px, 3.3vw, 18px);
-  line-height: 1.6;
+  line-height: 2.5;
 }
 
 .concept-first-row {
