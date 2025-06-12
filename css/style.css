@@ -352,7 +352,7 @@ body {
 .concept-section {
   width: 100%;
   background-color: white;
-  padding: 60px 0;
+  padding: 100px 0;
   display: flex;
   align-items: center;
 }
@@ -364,7 +364,7 @@ body {
 .concept-content {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 60px;
 }
 
 .concept-text {
@@ -1721,8 +1721,16 @@ body {
     font-weight: 700;
   }
 
+  .concept-section {
+    padding: 125px 0;
+  }
+
   .concept-container{
     padding: 0 20px;
+  }
+
+  .concept-content {
+    gap: 80px;
   }
 
   .concept-text {
