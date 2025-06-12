@@ -254,38 +254,6 @@ $('.sauna-hat-container').on('click', function () {
   }
 });
 
-
-  // ギャラリーモバイルスワイプ
-  let touchStartX = 0
-  let touchEndX = 0
-  const gallerySlides = $(".gallery-slide")
-  const galleryIndicators = $(".gallery-indicator")
-  let currentGallerySlide = 0
-
-  $(".gallery-carousel").on("touchstart", (e) => {
-    touchStartX = e.originalEvent.touches[0].clientX
-  })
-
-  $(".gallery-carousel").on("touchmove", (e) => {
-    touchEndX = e.originalEvent.touches[0].clientX
-  })
-
-  $(".gallery-carousel").on("touchend", () => {
-    if (touchStartX - touchEndX > 75) {
-      // 左スワイプ
-      currentGallerySlide = (currentGallerySlide + 1) % gallerySlides.length
-    } else if (touchEndX - touchStartX > 75) {
-      // 右スワイプ
-      currentGallerySlide = (currentGallerySlide - 1 + gallerySlides.length) % gallerySlides.length
-    }
-
-    gallerySlides.removeClass("active")
-    $(gallerySlides[currentGallerySlide]).addClass("active")
-
-    galleryIndicators.removeClass("active")
-    $(galleryIndicators[currentGallerySlide]).addClass("active")
-  })
-
   // ニュースモーダル
   const newsData = [
     {
