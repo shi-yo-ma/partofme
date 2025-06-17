@@ -356,11 +356,11 @@ body {
 /* section */
 .fade-in-target {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(70px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.fade-in-visible {
+.fade-in-target.fade-in-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1706,6 +1706,10 @@ body {
     opacity: 0;
   }
 
+  .fade-in-target {
+    transform: translateY(90px);
+  }
+
   .info-text {
     font-size: 16px;
     color: black;
@@ -1980,6 +1984,10 @@ body {
 
   .mobile-menu-btn {
     display: none;
+  }
+
+  .fade-in-target {
+    transform: translateY(100px);
   }
 
   .section-header h2 {
