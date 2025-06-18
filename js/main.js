@@ -43,7 +43,7 @@ $(document).ready(() => {
       }
     });
   }, {
-    threshold: 0.0 // 要素の一部が表示された時点で発動
+    threshold: 0.1 // 10%の表示で発火
   });
   // 3. 監視開始
   targets.forEach(target => observer.observe(target));
