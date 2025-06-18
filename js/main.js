@@ -501,18 +501,30 @@ story of cheesecakeはこちら
   })
 
   // スワイプ対応
+  let isArtistButtonTapped = false;
   let touchArtStartX = 0
   let touchArtEndX = 0
 
+  $(".view-artist-btn").on("touchstart", function () {
+    isArtistButtonTapped = true;
+  });
+
   $carousel.on('touchstart', function (e) {
+    if (isArtistButtonTapped) return;
     touchArtStartX = e.originalEvent.touches[0].clientX
   })
 
   $carousel.on('touchmove', function (e) {
+    if (isArtistButtonTapped) return;
     touchArtEndX = e.originalEvent.touches[0].clientX
   })
 
   $carousel.on('touchend', function () {
+    if (isArtistButtonTapped) {
+      isArtistButtonTapped = false; // 一度だけ無視して解除
+      return;
+    }
+
     const swipeThreshold = 50
     const diff = touchArtStartX - touchArtEndX
 
