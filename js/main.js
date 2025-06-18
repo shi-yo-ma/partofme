@@ -502,38 +502,59 @@ story of cheesecakeはこちら
 
   // スワイプ対応
   let isArtistButtonTapped = false;
-  let touchArtStartX = 0
-  let touchArtEndX = 0
+  let touchArtStartX = 0;
+  let touchArtEndX = 0;
+  let carouselOffsetLeft = 0;
+  let carouselWidth = 0;
 
   $(".view-artist-btn").on("touchstart", function () {
     isArtistButtonTapped = true;
   });
 
-  $carousel.on('touchstart', function (e) {
+  $carousel.on("touchstart", function (e) {
     if (isArtistButtonTapped) return;
-    touchArtStartX = e.originalEvent.touches[0].clientX
-  })
 
-  $carousel.on('touchmove', function (e) {
+    const touch = e.originalEvent.touches[0];
+    touchArtStartX = touch.clientX;
+    touchArtEndX = touchArtStartX
+    carouselOffsetLeft = $(".gallery-carousel-wrapper").offset().left;
+    carouselWidth = $(".gallery-carousel-wrapper").width();
+  });
+
+  $carousel.on("touchmove", function (e) {
     if (isArtistButtonTapped) return;
-    touchArtEndX = e.originalEvent.touches[0].clientX
-  })
+    const touch = e.originalEvent.touches[0];
+    touchArtEndX = touch.clientX;
+  });
 
-  $carousel.on('touchend', function () {
+  $carousel.on("touchend", function () {
     if (isArtistButtonTapped) {
-      isArtistButtonTapped = false; // 一度だけ無視して解除
+      isArtistButtonTapped = false;
       return;
     }
 
-    const swipeThreshold = 50
-    const diff = touchArtStartX - touchArtEndX
+    const swipeThreshold = 70;
+    const diff = touchArtStartX - touchArtEndX;
 
-    if (diff > swipeThreshold) {
-      $('.carousel-arrow.next').click()
-    } else if (diff < -swipeThreshold) {
-      $('.carousel-arrow.prev').click()
+    if (Math.abs(diff) > swipeThreshold) {
+      // スワイプ操作
+      if (diff > 0) {
+        $('.carousel-arrow.next').click();
+      } else {
+        $('.carousel-arrow.prev').click();
+      }
+    } else {
+      // タップ操作（スワイプ距離が小さいとき）
+      const tapX = touchArtEndX || touchArtStartX;
+      const tapPosition = tapX - carouselOffsetLeft;
+
+      if (tapPosition > carouselWidth / 2) {
+        $('.carousel-arrow.next').click(); // 右半分 → 次へ
+      } else {
+        $('.carousel-arrow.prev').click(); // 左半分 → 前へ
+      }
     }
-  })
+  });
 
   $(window).on('resize', function () {
     updateCarousel(false); // アニメーションなしで再描画
