@@ -1868,6 +1868,16 @@ body {
     gap: 50px;
   }
 
+  .amazon-link,
+  .amazon-btn {
+    font-weight: 600;
+  }
+
+  .base-link, 
+  .base-btn {
+    font-weight: 700;
+  }
+
   .featured-content {
     flex-direction: row;
     justify-content: space-evenly;
