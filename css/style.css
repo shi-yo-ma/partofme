@@ -603,13 +603,13 @@ body {
 }
 
 .main-text {
-  line-height: 1.8;
+  line-height: 2;
   font-size: clamp(10px, 2.8vw, 18px);
   font-weight: 500;
 }
 
 .main-text-first {
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .last-line {
@@ -1760,7 +1760,6 @@ body {
   }
   
   .concept-paragraph {
-    font-weight: 700;
     font-size: 20px;
   }
 
@@ -1793,6 +1792,7 @@ body {
   }
 
   .main-text {
+    line-height: 1.8;
     font-size: 17px;
   }
 
