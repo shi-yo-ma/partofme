@@ -603,7 +603,7 @@ body {
 }
 
 .main-text {
-  line-height: 2;
+  line-height: 1.9;
   font-size: clamp(10px, 2.8vw, 18px);
   font-weight: 500;
 }
