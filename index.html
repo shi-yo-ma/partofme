@@ -10,418 +10,427 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    (function () {
+      if (window.location.hash) {
+        document.write('<style>#loading-animation { display: none !important; }</style>');
+      }
+    })();
+  </script>
 </head>
 <body>
   <!-- ローディングアニメーション -->
   <div id="loading-animation" class="loading-screen">
-    <img src="images/partofme_logo_tagline_black.webp" alt="会社ロゴ" id="animate-pulse" class="animate-pulse">
+    <img src="images/partofme_logo_tagline_black.webp" alt="会社ロゴ" class="animate-pulse">
   </div>
 
-  <!-- ヘッダー -->
-  <header id="header" class="header">
-    <div class="header-container">
-      <div class="header-content">
-        <!-- ロゴ -->
-        <a href="index.html" class="logo">
-          <img id="header-logo" alt="会社ロゴ">
-        </a>
-
-        <div class="header-right">
-          <!-- デスクトップナビゲーション -->
-          <div class="desktop-nav">
-            <button class="nav-link" data-section="about">About</button>
-            <button class="nav-link" data-section="pickup">Pick Up</button>
-            <button class="nav-link" data-section="news">News</button>
-            <button class="nav-link" data-section="gallery">Gallery</button>
-          </div>
-
-          <!-- ヘッダーボタン -->
-          <div class="header-buttons">
-            <a href="store.html" class="header-btn">Store</a>
-            <a href="contact.html" class="header-btn">Contact</a>
-          </div>
-
-          <!-- モバイルメニューボタン -->
-          <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- モバイルメニュー -->
-  <div id="mobile-menu" class="mobile-menu">
-    <div class="mobile-menu-overlay"></div>
-    <div class="mobile-menu-content">
-      <button class="mobile-menu-close">
-        <i class="fas fa-times"></i>
-      </button>
-      <nav class="mobile-nav">
-        <button class="mobile-nav-link" data-section="about">About</button>
-        <button class="mobile-nav-link" data-section="pickup">Pick Up</button>
-        <button class="mobile-nav-link" data-section="news">News</button>
-        <button class="mobile-nav-link" data-section="gallery">Gallery</button>
-      </nav>
-    </div>
-  </div>
-
-  <main>
-    
-    <!-- ファーストビュー（HeroSlider） -->
-    <div class="hero-slider">
-      <!-- スライダー画像 -->
-      <div class="slider-container">
-        <div class="slider-image active" data-index="0">
-          <img src="images/top2.webp" alt="??? by ????">
-        </div>
-        <div class="slider-image" data-index="1">
-          <img src="images/top4.webp" alt="スマートフォンで遊んだ思い出 by よしけん">
-        </div>
-        <div class="slider-image" data-index="2">
-          <img src="images/top3.webp" alt="??? by はせがわたくみ">
-        </div>
-        <div class="slider-image" data-index="3">
-          <img src="images/top1.webp" alt="??? by ????">
-        </div>
-        <div class="slider-image" data-index="4">
-          <img src="images/top5.webp" alt="??? by ????">
-        </div>
-      </div>
-
-      <!-- モバイル用作品情報 -->
-      <!--
-      <div class="mobile-info-container">
-        <div class="mobile-info active" data-index="0">
-          <p class="artwork-title">『Title Coming Soon』</p>
-          <p class="artist-name">artist : preparing...</p>
-          <p class="atelier-name">atelier : preparing...</p>
-        </div>
-        <div class="mobile-info" data-index="1">
-          <p class="artwork-title">『スマートフォンで遊んだ思い出』</p>
-          <p class="artist-name">artist : よしけん</p>
-          <p class="atelier-name">atelier : preparing...</p>
-        </div>
-        <div class="mobile-info" data-index="2">
-          <p class="artwork-title">『Title Coming Soon』</p>
-          <p class="artist-name">artist : はせがわたくみ</p>
-          <p class="atelier-name">atelier : preparing...</p>
-        </div>
-        <div class="mobile-info" data-index="3">
-          <p class="artwork-title">『Title Coming Soon』</p>
-          <p class="artist-name">artist : preparing...</p>
-          <p class="atelier-name">atelier : preparing...</p>
-        </div>
-        <div class="mobile-info" data-index="4">
-          <p class="artwork-title">『Title Coming Soon』</p>
-          <p class="artist-name">artist : preparing...</p>
-          <p class="atelier-name">atelier : preparing...</p>
-        </div>
-      </div>
-      -->
-
-      <!-- デスクトップ用作品情報 -->
-      <!--
-      <div class="desktop-info-container">
-        <div class="desktop-info active" data-index="0">
-          <p class="info-text">
-            <span class="artwork-title">『Title Coming Soon』</span>
-            <span class="artist-name">artist : preparing...</span>
-            <span class="atelier-name">atelier : preparing...</span>
-          </p>
-        </div>
-        <div class="desktop-info" data-index="1">
-          <p class="info-text">
-            <span class="artwork-title">『スマートフォンで遊んだ思い出』</span>
-            <span class="artist-name">artist : よしけん</span>
-            <span class="atelier-name">atelier : preparing...</span>
-          </p>
-        </div>
-        <div class="desktop-info" data-index="2">
-          <p class="info-text">
-            <span class="artwork-title">『Title Coming Soon』</span>
-            <span class="artist-name">artist : はせがわたくみ</span>
-            <span class="atelier-name">atelier : preparing...</span>
-          </p>
-        </div>
-        <div class="desktop-info" data-index="3">
-          <p class="info-text">
-            <span class="artwork-title">『Title Coming Soon』</span>
-            <span class="artist-name">artist : preparing...</span>
-            <span class="atelier-name">atelier : preparing...</span>
-          </p>
-        </div>
-        <div class="desktop-info" data-index="4">
-          <p class="info-text">
-            <span class="artwork-title">『Title Coming Soon』</span>
-            <span class="artist-name">artist : preparing...</span>
-            <span class="atelier-name">atelier : preparing...</span>
-          </p>
-        </div>
-      </div>
-      -->
-    </div>
-
-    <!-- コンセプトセクション -->
-    <section id="concept" class="concept-section">
-      <div class="container concept-container">
-        <div class="concept-content">
-          <div class="concept-text fade-in-target">
-            <div class="concept-paragraph">
-              <p class="concept-first-row">障がい者だから。</p>
-              <p>この言葉に続くのは、きめつけや偏見かもしれない。<br>悪意がなくても、見えない壁ができてしまう。</p>
-            </div>
-
-            <div class="concept-paragraph">
-              <p>その壁を、乗り越えるのは大変だし、時間がかかる。<br>ぶっこわしてしまうのも、なんだか平和じゃない。</p>
-            </div>
-
-            <div class="concept-paragraph">
-              <p>ならばその壁に、おおきな絵をかいてしまおう。<br>障がい者アートとは、そんなチャレンジだと思う。</p>
-            </div>
-
-            <div class="concept-paragraph">
-              <p>彼らの絵は、この世界はもっと自由だよ。と教えてくれる。<br>彼らには、アートでこの世界をぬりかえる力がある。</p>
-            </div>
-
-            <div class="concept-paragraph">
-              <p>わたしたちは、ほんの一部でも、彼らの力になりたい。</p>
-            </div>
-
-            <div class="concept-footer">
-              <h2>世界をぬりかえる人のそばに。</h2>
-              <img src="images/partofme_logo_black.webp" alt="会社ロゴ">
-            </div>
-          </div>
-
-          <div class="concept-images fade-in-target">
-            <div class="concept-image image-1">
-              <img src="images/concept-image1.webp" alt="コンセプト1">
-            </div>
-            <div class="concept-image image-2">
-              <img src="images/concept-image2.webp" alt="コンセプト2">
-            </div>
-            <div class="concept-image image-3">
-              <img src="images/concept-image3.webp" alt="コンセプト3">
-            </div>
-            <div class="concept-image image-4">
-              <img src="images/concept-image4.webp" alt="コンセプト4">
-            </div>
-            <div class="concept-image image-5">
-              <img src="images/concept-image5.webp" alt="コンセプト5">
-            </div>
-            <div class="concept-image image-6">
-              <img src="images/concept-image6.webp" alt="コンセプト6">
-            </div>
-            <div class="concept-image image-7">
-              <img src="images/concept-image7.webp" alt="コンセプト7">
-            </div>
-            <div class="concept-image image-8">
-              <img src="images/concept-image8.webp" alt="コンセプト8">
-            </div>
-            <div class="concept-image image-11">
-              <img src="images/concept-image11.webp" alt="コンセプト11">
-            </div>
-            <div class="concept-image image-13">
-              <img src="images/concept-image13.webp" alt="コンセプト13">
-            </div>
-            <div class="concept-image image-14">
-              <img src="images/concept-image14.webp" alt="コンセプト14">
-            </div>
-            <div class="concept-image image-15">
-              <img src="images/concept-image15.webp" alt="コンセプト15">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Aboutセクション -->
-    <section id="about" class="about-section">
-      <div class="container fade-in-target">
-        <div class="section-header">
-          <h2>About</h2>
-          <p class="section-tagline">ぬりかえる人と、<br>ぬりかえたい人を、<br>つなぐ。</p>
-        </div>
-
-        <div class="about-content">
-          <div class="about-image">
-            <img src="images/about.webp" alt="私たちの活動内容">
-          </div>
-          <div class="about-text">
-            <p class="first-line">アーティストたちは、<br>月給17,000円※ほど。</p>
-            <p class="main-text main-text-first">生活や趣味、行きたい場所や見たい景色。<br>
-            それらぜんぶを諦めないために。必要なのは給料。<br>
-            だからpart of meはボランティアでなく、<br>
-            ビジネスで、アーティストたちをサポートします。<br>
-            飲食店のカベや、おかしのパッケージ。身のまわりの生活用品。<br>
-            アートが活躍できる場所すべてが、彼らのフィールドです。</p>
-            <p class="main-text">「ぬりかえたい人」の願いまで叶えてこそ、世界はぬりかわっていく。<br>
-            何かをぬりかえたいとき、お気軽にお声がけください。</p>
-            <p class="last-line">※令和4年度 厚生労働省HPより</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pick Upセクション -->
-    <section id="pickup" class="pickup-section">
-      <div class="container fade-in-target">
-        <div class="section-header">
-          <h2>Pick Up</h2>
-          <p class="section-tagline">日用品をキャンバスに</p>
-        </div>
-
-        <div class="pickup-content">
-          <div class="sauna-hat-container">
-            <div class="tap-hint">
-              <img src="images/finger_lefthand.webp" alt="左手">
-              <span>サウナハットをタップ</span>
-              <img src="images/finger_righthand.webp" alt="右手">
-            </div>
-            <div class="mask">
-              <img src="images/saunahat_black.webp" alt="黒のサウナハット" class="front-image">
-            </div>
-            <img src="images/saunahat_art-removebg.webp" alt="アート入りのサウナハット" class="back-image">
-          </div>
-
-          <div class="pickup-info">
-            <p>めざしたのは、ふだんづかいの障がい者アート。<br>
-              たとえば、サウナハット。無地でも困らないけれど、<br>
-              そこにアートがあると、世界はちょっと明るい。</p>
-            <a href="store.html" class="pickup-link">くわしくはこちら</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsセクション -->
-    <section id="news" class="news-section">
-      <div class="container fade-in-target">
-        <div class="section-header">
-          <h2>News</h2>
-        </div>
-        <div class="news-grid" id="news-container">
-          <!-- ニュース記事はJavaScriptで動的に生成されます -->
-        </div>
-      </div>
-    </section>
-    
-    <!-- ギャラリーセクション -->
-    <section id="gallery" class="gallery-section">
-      <div class="container fade-in-target">
-        <div class="section-header">
-          <h2>Gallery</h2>
-          <p class="section-tagline">せっかくなので見ていってください</p>
-        </div>
-
-        <!-- カルーセル本体 -->
-        <div class="gallery-content">
-          <div class="gallery-carousel-wrapper">
-            <button class="carousel-arrow prev">&#9664;</button>
-            <div class="gallery-carousel">
-              <div class="gallery-slide">
-                <img src="images/top4.webp" alt="スマートフォンで遊んだ思い出-よしけん作">
-                <p class="art-title">スマートフォンで遊んだ思い出</p>
-                <button class="view-artist-btn" data-artist="4">
-                  <i class="fas fa-info-circle"></i>
-                  アーティストを見る
-                </button>
-              </div>
-              <div class="gallery-slide">
-                <img src="images/top3.webp" alt="はせがわたくみ作">
-                <p class="art-title"></p>
-                <button class="view-artist-btn" data-artist="3">
-                  <i class="fas fa-info-circle"></i>
-                  アーティストを見る
-                </button>
-              </div>
-              <div class="gallery-slide active">
-                <img src="images/top1.webp" alt="">
-                <p class="art-title"></p>
-                <button class="view-artist-btn" data-artist="1">
-                  <i class="fas fa-info-circle"></i>
-                  アーティストを見る
-                </button>
-              </div>
-              <div class="gallery-slide">
-                <img src="images/top2.webp" alt="">
-                <p class="art-title"></p>
-                <button class="view-artist-btn" data-artist="2">
-                  <i class="fas fa-info-circle"></i>
-                  アーティストを見る
-                </button>
-              </div>
-              <div class="gallery-slide">
-                <img src="images/top5.webp" alt="">
-                <p class="art-title"></p>
-                <button class="view-artist-btn" data-artist="5">
-                  <i class="fas fa-info-circle"></i>
-                  アーティストを見る
-                </button>
-              </div>
-            </div>
-            <button class="carousel-arrow next">&#9654;</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- フッター -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="images/partofme_logo_tagline_black.webp" alt="会社ロゴ">
-        </div>
-
-        <div class="footer-social">
-          <a href="https://www.instagram.com/partofme_official/" target="_blank" rel="noopener noreferrer" class="social-link">
-            <i class="fa-brands fa-instagram"></i>
-            <span class="sr-only">Instagram</span>
+  <div id="main-content">
+    <!-- ヘッダー -->
+    <header id="header" class="header">
+      <div class="header-container">
+        <div class="header-content">
+          <!-- ロゴ -->
+          <a href="index.html" class="logo">
+            <img id="header-logo" alt="会社ロゴ">
           </a>
-          <a href="https://x.com/pom_support" target="_blank" rel="noopener noreferrer" class="social-link">
-            <i class="fa-brands fa-x-twitter"></i>
-            <span class="sr-only">X (Twitter)</span>
-          </a>
+
+          <div class="header-right">
+            <!-- デスクトップナビゲーション -->
+            <div class="desktop-nav">
+              <button class="nav-link" data-section="about">About</button>
+              <button class="nav-link" data-section="pickup">Pick Up</button>
+              <button class="nav-link" data-section="news">News</button>
+              <button class="nav-link" data-section="gallery">Gallery</button>
+            </div>
+
+            <!-- ヘッダーボタン -->
+            <div class="header-buttons">
+              <a href="store.html" class="header-btn">Store</a>
+              <a href="contact.html" class="header-btn">Contact</a>
+            </div>
+
+            <!-- モバイルメニューボタン -->
+            <button class="mobile-menu-btn">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
         </div>
       </div>
+    </header>
 
-      <div class="footer-copyright">
-        <p>&copy; <span id="current-year"></span> part of me. All rights reserved.</p>
+    <!-- モバイルメニュー -->
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="mobile-menu-overlay"></div>
+      <div class="mobile-menu-content">
+        <button class="mobile-menu-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <nav class="mobile-nav">
+          <button class="mobile-nav-link" data-section="about">About</button>
+          <button class="mobile-nav-link" data-section="pickup">Pick Up</button>
+          <button class="mobile-nav-link" data-section="news">News</button>
+          <button class="mobile-nav-link" data-section="gallery">Gallery</button>
+        </nav>
       </div>
     </div>
-  </footer>
 
-  <!-- モーダル -->
-  <!-- ニュース詳細モーダル -->
-  <div id="news-modal" class="modal">
-    <div class="modal-content">
-      <button class="modal-close"><i class="fas fa-times"></i></button>
-      <div class="modal-header">
-        <h2 id="news-modal-title"></h2>
-        <p id="news-modal-date" class="modal-date"></p>
+    <main>
+      
+      <!-- ファーストビュー（HeroSlider） -->
+      <div class="hero-slider">
+        <!-- スライダー画像 -->
+        <div class="slider-container">
+          <div class="slider-image active" data-index="0">
+            <img src="images/top2.webp" alt="??? by ????">
+          </div>
+          <div class="slider-image" data-index="1">
+            <img src="images/top4.webp" alt="スマートフォンで遊んだ思い出 by よしけん">
+          </div>
+          <div class="slider-image" data-index="2">
+            <img src="images/top3.webp" alt="??? by はせがわたくみ">
+          </div>
+          <div class="slider-image" data-index="3">
+            <img src="images/top1.webp" alt="??? by ????">
+          </div>
+          <div class="slider-image" data-index="4">
+            <img src="images/top5.webp" alt="??? by ????">
+          </div>
+        </div>
+
+        <!-- モバイル用作品情報 -->
+        <!--
+        <div class="mobile-info-container">
+          <div class="mobile-info active" data-index="0">
+            <p class="artwork-title">『Title Coming Soon』</p>
+            <p class="artist-name">artist : preparing...</p>
+            <p class="atelier-name">atelier : preparing...</p>
+          </div>
+          <div class="mobile-info" data-index="1">
+            <p class="artwork-title">『スマートフォンで遊んだ思い出』</p>
+            <p class="artist-name">artist : よしけん</p>
+            <p class="atelier-name">atelier : preparing...</p>
+          </div>
+          <div class="mobile-info" data-index="2">
+            <p class="artwork-title">『Title Coming Soon』</p>
+            <p class="artist-name">artist : はせがわたくみ</p>
+            <p class="atelier-name">atelier : preparing...</p>
+          </div>
+          <div class="mobile-info" data-index="3">
+            <p class="artwork-title">『Title Coming Soon』</p>
+            <p class="artist-name">artist : preparing...</p>
+            <p class="atelier-name">atelier : preparing...</p>
+          </div>
+          <div class="mobile-info" data-index="4">
+            <p class="artwork-title">『Title Coming Soon』</p>
+            <p class="artist-name">artist : preparing...</p>
+            <p class="atelier-name">atelier : preparing...</p>
+          </div>
+        </div>
+        -->
+
+        <!-- デスクトップ用作品情報 -->
+        <!--
+        <div class="desktop-info-container">
+          <div class="desktop-info active" data-index="0">
+            <p class="info-text">
+              <span class="artwork-title">『Title Coming Soon』</span>
+              <span class="artist-name">artist : preparing...</span>
+              <span class="atelier-name">atelier : preparing...</span>
+            </p>
+          </div>
+          <div class="desktop-info" data-index="1">
+            <p class="info-text">
+              <span class="artwork-title">『スマートフォンで遊んだ思い出』</span>
+              <span class="artist-name">artist : よしけん</span>
+              <span class="atelier-name">atelier : preparing...</span>
+            </p>
+          </div>
+          <div class="desktop-info" data-index="2">
+            <p class="info-text">
+              <span class="artwork-title">『Title Coming Soon』</span>
+              <span class="artist-name">artist : はせがわたくみ</span>
+              <span class="atelier-name">atelier : preparing...</span>
+            </p>
+          </div>
+          <div class="desktop-info" data-index="3">
+            <p class="info-text">
+              <span class="artwork-title">『Title Coming Soon』</span>
+              <span class="artist-name">artist : preparing...</span>
+              <span class="atelier-name">atelier : preparing...</span>
+            </p>
+          </div>
+          <div class="desktop-info" data-index="4">
+            <p class="info-text">
+              <span class="artwork-title">『Title Coming Soon』</span>
+              <span class="artist-name">artist : preparing...</span>
+              <span class="atelier-name">atelier : preparing...</span>
+            </p>
+          </div>
+        </div>
+        -->
       </div>
-      <div class="modal-body">
-        <div id="news-modal-image" class="modal-image news-modal-image"></div>
-        <div id="news-modal-detail" class="modal-text"></div>
+
+      <!-- コンセプトセクション -->
+      <section id="concept" class="concept-section">
+        <div class="container concept-container">
+          <div class="concept-content">
+            <div class="concept-text fade-in-target">
+              <div class="concept-paragraph">
+                <p class="concept-first-row">障がい者だから。</p>
+                <p>この言葉に続くのは、きめつけや偏見かもしれない。<br>悪意がなくても、見えない壁ができてしまう。</p>
+              </div>
+
+              <div class="concept-paragraph">
+                <p>その壁を、乗り越えるのは大変だし、時間がかかる。<br>ぶっこわしてしまうのも、なんだか平和じゃない。</p>
+              </div>
+
+              <div class="concept-paragraph">
+                <p>ならばその壁に、おおきな絵をかいてしまおう。<br>障がい者アートとは、そんなチャレンジだと思う。</p>
+              </div>
+
+              <div class="concept-paragraph">
+                <p>彼らの絵は、この世界はもっと自由だよ。と教えてくれる。<br>彼らには、アートでこの世界をぬりかえる力がある。</p>
+              </div>
+
+              <div class="concept-paragraph">
+                <p>わたしたちは、ほんの一部でも、彼らの力になりたい。</p>
+              </div>
+
+              <div class="concept-footer">
+                <h2>世界をぬりかえる人のそばに。</h2>
+                <img src="images/partofme_logo_black.webp" alt="会社ロゴ">
+              </div>
+            </div>
+
+            <div class="concept-images fade-in-target">
+              <div class="concept-image image-1">
+                <img src="images/concept-image1.webp" alt="コンセプト1">
+              </div>
+              <div class="concept-image image-2">
+                <img src="images/concept-image2.webp" alt="コンセプト2">
+              </div>
+              <div class="concept-image image-3">
+                <img src="images/concept-image3.webp" alt="コンセプト3">
+              </div>
+              <div class="concept-image image-4">
+                <img src="images/concept-image4.webp" alt="コンセプト4">
+              </div>
+              <div class="concept-image image-5">
+                <img src="images/concept-image5.webp" alt="コンセプト5">
+              </div>
+              <div class="concept-image image-6">
+                <img src="images/concept-image6.webp" alt="コンセプト6">
+              </div>
+              <div class="concept-image image-7">
+                <img src="images/concept-image7.webp" alt="コンセプト7">
+              </div>
+              <div class="concept-image image-8">
+                <img src="images/concept-image8.webp" alt="コンセプト8">
+              </div>
+              <div class="concept-image image-11">
+                <img src="images/concept-image11.webp" alt="コンセプト11">
+              </div>
+              <div class="concept-image image-13">
+                <img src="images/concept-image13.webp" alt="コンセプト13">
+              </div>
+              <div class="concept-image image-14">
+                <img src="images/concept-image14.webp" alt="コンセプト14">
+              </div>
+              <div class="concept-image image-15">
+                <img src="images/concept-image15.webp" alt="コンセプト15">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Aboutセクション -->
+      <section id="about" class="about-section">
+        <div class="container fade-in-target">
+          <div class="section-header">
+            <h2>About</h2>
+            <p class="section-tagline">ぬりかえる人と、<br>ぬりかえたい人を、<br>つなぐ。</p>
+          </div>
+
+          <div class="about-content">
+            <div class="about-image">
+              <img src="images/about.png" alt="私たちの活動内容">
+            </div>
+            <div class="about-text">
+              <p class="first-line">アーティストたちは、<br>月給17,000円※ほど。</p>
+              <p class="main-text main-text-first">生活や趣味、行きたい場所や見たい景色。<br>
+              それらぜんぶを諦めないために。必要なのは給料。<br>
+              だからpart of meはボランティアでなく、<br>
+              ビジネスで、アーティストたちをサポートします。<br>
+              飲食店のカベや、おかしのパッケージ。身のまわりの生活用品。<br>
+              アートが活躍できる場所すべてが、彼らのフィールドです。</p>
+              <p class="main-text">「ぬりかえたい人」の願いまで叶えてこそ、世界はぬりかわっていく。<br>
+              何かをぬりかえたいとき、お気軽にお声がけください。</p>
+              <p class="last-line">※令和4年度 厚生労働省HPより</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pick Upセクション -->
+      <section id="pickup" class="pickup-section">
+        <div class="container fade-in-target">
+          <div class="section-header">
+            <h2>Pick Up</h2>
+            <p class="section-tagline">日用品をキャンバスに</p>
+          </div>
+
+          <div class="pickup-content">
+            <div class="sauna-hat-container">
+              <div class="tap-hint">
+                <img src="images/finger_lefthand.webp" alt="左手">
+                <span>サウナハットをタップ</span>
+                <img src="images/finger_righthand.webp" alt="右手">
+              </div>
+              <div class="mask">
+                <img src="images/saunahat_black.webp" alt="黒のサウナハット" class="front-image">
+              </div>
+              <img src="images/saunahat_art-removebg.webp" alt="アート入りのサウナハット" class="back-image">
+            </div>
+
+            <div class="pickup-info">
+              <p>めざしたのは、ふだんづかいの障がい者アート。<br>
+                たとえば、サウナハット。無地でも困らないけれど、<br>
+                そこにアートがあると、世界はちょっと明るい。</p>
+              <a href="store.html" class="pickup-link">くわしくはこちら</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsセクション -->
+      <section id="news" class="news-section">
+        <div class="container fade-in-target">
+          <div class="section-header">
+            <h2>News</h2>
+          </div>
+          <div class="news-grid" id="news-container">
+            <!-- ニュース記事はJavaScriptで動的に生成されます -->
+          </div>
+        </div>
+      </section>
+      
+      <!-- ギャラリーセクション -->
+      <section id="gallery" class="gallery-section">
+        <div class="container fade-in-target">
+          <div class="section-header">
+            <h2>Gallery</h2>
+            <p class="section-tagline">せっかくなので見ていってください</p>
+          </div>
+
+          <!-- カルーセル本体 -->
+          <div class="gallery-content">
+            <div class="gallery-carousel-wrapper">
+              <button class="carousel-arrow prev">&#9664;</button>
+              <div class="gallery-carousel">
+                <div class="gallery-slide">
+                  <img src="images/top4.webp" alt="スマートフォンで遊んだ思い出-よしけん作">
+                  <p class="art-title">スマートフォンで遊んだ思い出</p>
+                  <button class="view-artist-btn" data-artist="4">
+                    <i class="fas fa-info-circle"></i>
+                    アーティストを見る
+                  </button>
+                </div>
+                <div class="gallery-slide">
+                  <img src="images/top3.webp" alt="はせがわたくみ作">
+                  <p class="art-title"></p>
+                  <button class="view-artist-btn" data-artist="3">
+                    <i class="fas fa-info-circle"></i>
+                    アーティストを見る
+                  </button>
+                </div>
+                <div class="gallery-slide active">
+                  <img src="images/top1.webp" alt="">
+                  <p class="art-title"></p>
+                  <button class="view-artist-btn" data-artist="1">
+                    <i class="fas fa-info-circle"></i>
+                    アーティストを見る
+                  </button>
+                </div>
+                <div class="gallery-slide">
+                  <img src="images/top2.webp" alt="">
+                  <p class="art-title"></p>
+                  <button class="view-artist-btn" data-artist="2">
+                    <i class="fas fa-info-circle"></i>
+                    アーティストを見る
+                  </button>
+                </div>
+                <div class="gallery-slide">
+                  <img src="images/top5.webp" alt="">
+                  <p class="art-title"></p>
+                  <button class="view-artist-btn" data-artist="5">
+                    <i class="fas fa-info-circle"></i>
+                    アーティストを見る
+                  </button>
+                </div>
+              </div>
+              <button class="carousel-arrow next">&#9654;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="images/partofme_logo_tagline_black.webp" alt="会社ロゴ">
+          </div>
+
+          <div class="footer-social">
+            <a href="https://www.instagram.com/partofme_official/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fa-brands fa-instagram"></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+            <a href="https://x.com/pom_support" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fa-brands fa-x-twitter"></i>
+              <span class="sr-only">X (Twitter)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> part of me. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- モーダル -->
+    <!-- ニュース詳細モーダル -->
+    <div id="news-modal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <div class="modal-header">
+          <h2 id="news-modal-title"></h2>
+          <p id="news-modal-date" class="modal-date"></p>
+        </div>
+        <div class="modal-body">
+          <div id="news-modal-image" class="modal-image news-modal-image"></div>
+          <div id="news-modal-detail" class="modal-text"></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- アーティスト詳細モーダル -->
-  <div id="artist-modal" class="modal">
-    <div class="modal-content">
-      <button class="modal-close"><i class="fas fa-times"></i></button>
-      <div class="modal-header">
-        <h2 id="artist-modal-name"></h2>
-      </div>
-      <div class="modal-body artist-modal-body">
-        <div id="artist-modal-portrait" class="modal-image artist-modal-image"></div>
-        <div class="artist-info">
-          <h3>アーティストプロフィール</h3>
-          <p id="artist-modal-bio"></p>
+    <!-- アーティスト詳細モーダル -->
+    <div id="artist-modal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <div class="modal-header">
+          <h2 id="artist-modal-name"></h2>
+        </div>
+        <div class="modal-body artist-modal-body">
+          <div id="artist-modal-portrait" class="modal-image artist-modal-image"></div>
+          <div class="artist-info">
+            <h3>アーティストプロフィール</h3>
+            <p id="artist-modal-bio"></p>
+          </div>
         </div>
       </div>
     </div>

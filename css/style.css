@@ -55,10 +55,6 @@ body {
   z-index: 9999;
 }
 
-#animate-pulse {
-  display: none;
-}
-
 .animate-pulse {
   width: 60%;
   height: auto;
@@ -97,6 +93,9 @@ body {
   }
 }
 
+#main-content {
+  display: none; /* 初期は非表示にしておく */
+}
 
 /* Header */
 .header {

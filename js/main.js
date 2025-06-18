@@ -1,22 +1,21 @@
 $(document).ready(() => {
   // ローディングアニメーション
+  const hash = window.location.hash;
 
-  window.onload = function () {
-    const hash = window.location.hash;
-
-    if (hash) {
-      $("#loading-animation").hide(); // 即座に非表示
-      $(window).scrollTop(0);
-      setTimeout(() => {
-        scrollToSection(hash.substring(1));
-      }, 100);
-    } else {
-      $("#animate-pulse").css("display", "flex");
-      setTimeout(() => {
-        $("#loading-animation").fadeOut(1000); // アニメーションで非表示
-      }, 3000);
-    }
-  };
+  if (hash) {
+    $("#loading-animation").hide(); // 即座に非表示
+    $("#main-content").show();
+    $(window).scrollTop(0);
+    setTimeout(() => {
+      scrollToSection(hash.substring(1));
+    }, 100);
+  } else {
+    $("#loading-animation").show();
+    $("#main-content").show();
+    setTimeout(() => {
+      $("#loading-animation").fadeOut(1000); // アニメーションで非表示
+    }, 3000);
+  }
 
   // 現在年を設定
   $("#current-year").text(new Date().getFullYear())
