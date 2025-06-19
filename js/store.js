@@ -233,9 +233,7 @@ $(document).ready(() => {
           </div>
           <div class="product-modal-right">
             <h3>説明</h3>
-            <div id="product-modal-description" class="product-description">
-              ${product.description}
-            </div>
+            <div id="product-modal-description" class="product-description">${product.description}</div>
           </div>
         </div>
       `
@@ -261,9 +259,7 @@ $(document).ready(() => {
           </div>
           <div class="product-modal-right">
             <h3>商品説明</h3>
-            <div id="product-modal-description" class="product-description">
-              ${product.description}
-            </div>
+            <div id="product-modal-description" class="product-description">${product.description}</div>
           </div>
         </div>
       `

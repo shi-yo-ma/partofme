@@ -648,6 +648,8 @@ body {
   justify-content: center;
   align-items: center;
   animation: bounce 2s infinite;
+  pointer-events: none;
+  cursor: default; 
 }
 
 .tap-hint img {
@@ -1629,10 +1631,6 @@ body {
 
 /* Media Queries */
 @media (min-width: 768px) {
-  .animate-pulse {
-    width: 40%;
-  }
-
   .header-content {
     height: 85px;
     padding: 0 30px;
@@ -1656,6 +1654,14 @@ body {
   .mobile-menu-btn {
     font-size: 34px;
     margin-left: 10px;
+  }
+
+  .mobile-nav {
+    gap: 80px;
+  }
+
+  .mobile-nav-link {
+    font-size: 36px;
   }
 
   .hero-slider {
@@ -1962,6 +1968,10 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .animate-pulse {
+    width: 40%;
+  }
+
   .header-right {
     height: 100%;
     gap: 50px;
