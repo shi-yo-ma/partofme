@@ -831,6 +831,10 @@ body {
   z-index: 2;
 }
 
+.gallery-slide.active img:hover {
+  cursor: pointer;
+}
+
 .gallery-slide img {
   width: 100%;
   height: auto;
@@ -1068,7 +1072,7 @@ body {
 
 .art-modal-close {
   top: 0px;
-  right: 15px;
+  right: 0px;
   font-size: 25px;
 }
 
@@ -1929,6 +1933,10 @@ body {
 
   .modal-close {
     font-size: 30px;
+  }
+
+  .art-modal-close {
+    right: 15px;
   }
 
   .artist-modal-body {
