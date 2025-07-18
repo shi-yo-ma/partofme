@@ -423,6 +423,7 @@ story of cheesecakeはこちら
     },
   ]
 
+  const $wrapper = $('.gallery-carousel-wrapper')
   const $carousel = $('.gallery-carousel')
   const $slides = $('.gallery-slide')
   const totalSlides = $slides.length
@@ -467,11 +468,6 @@ story of cheesecakeはこちら
     }
   }
 
-  function goToSlide(index) {
-    currentArtIndex = index
-    updateCarousel()
-  }
-
   $('.carousel-arrow.prev').on('click', function () {
     if (currentArtIndex <= 0) {
       currentArtIndex = -1
@@ -511,7 +507,7 @@ story of cheesecakeはこちら
     isArtistButtonTapped = true;
   });
 
-  $carousel.on("touchstart", function (e) {
+  $wrapper.on("touchstart", function (e) {
     if (isArtistButtonTapped) return;
 
     const touch = e.originalEvent.touches[0];
@@ -521,13 +517,13 @@ story of cheesecakeはこちら
     carouselWidth = $(".gallery-carousel-wrapper").width();
   });
 
-  $carousel.on("touchmove", function (e) {
+  $wrapper.on("touchmove", function (e) {
     if (isArtistButtonTapped) return;
     const touch = e.originalEvent.touches[0];
     touchArtEndX = touch.clientX;
   });
 
-  $carousel.on("touchend", function () {
+  $wrapper.on("touchend", function () {
     if (isArtistButtonTapped) {
       isArtistButtonTapped = false;
       return;
@@ -548,11 +544,41 @@ story of cheesecakeはこちら
       const tapX = touchArtEndX || touchArtStartX;
       const tapPosition = tapX - carouselOffsetLeft;
 
-      if (tapPosition > carouselWidth / 2) {
-        $('.carousel-arrow.next').click(); // 右半分 → 次へ
-      } else {
-        $('.carousel-arrow.prev').click(); // 左半分 → 前へ
+      // 今のactive画像の位置・幅を取得
+      const $activeImg = $('.gallery-slide.active img');
+      if ($activeImg.length) {
+        const imgOffset = $activeImg.offset();
+        const imgLeft = imgOffset.left - carouselOffsetLeft; // wrapper基準のleft
+        const imgRight = imgLeft + $activeImg.outerWidth();
+
+        // タップ位置が画像内ならモーダル表示
+        if (tapPosition >= imgLeft && tapPosition <= imgRight) {
+          const src = $activeImg.attr('src');
+          const alt = $activeImg.attr('alt');
+          const title = $('.gallery-slide.active').closest('.gallery-slide').find('.art-title').text();
+
+          showArtModal(src, alt, title);
+          return;
+        } else if (tapPosition < imgLeft) {
+          // 画像の左側余白なら「前へ」
+          $('.carousel-arrow.prev').click();
+          return;
+        } else if (tapPosition > imgRight) {
+          // 画像の右側余白なら「次へ」
+          $('.carousel-arrow.next').click();
+          return;
+        }
       }
+    }
+  });
+
+  $wrapper.on('click', '.gallery-slide.active img', function(e) {
+    // スマホで誤作動しないようpointer typeで分岐（任意）
+    if (window.matchMedia('(pointer: fine)').matches) {
+      const src = $(this).attr('src');
+      const alt = $(this).attr('alt');
+      const title = $(this).closest('.gallery-slide').find('.art-title').text();
+      showArtModal(src, alt, title);
     }
   });
 
@@ -564,7 +590,7 @@ story of cheesecakeはこちら
   currentArtIndex = 0
   updateCarousel(false)
   
-  $(".view-artist-btn, .gallery-item").click(function () {
+  $(".view-artist-btn").click(function () {
     const artistId = $(this).data("artist")
     const artist = artistData.find((item) => item.id === artistId)
 
@@ -576,6 +602,14 @@ story of cheesecakeはこちら
       $("body").css("overflow", "hidden")
     }
   })
+
+  
+  function showArtModal(src, alt, title) {
+    $('#artModal .art-modal-img').attr('src', src).attr('alt', alt);
+    $('#artModal .art-modal-title').text(title);
+    $('#artModal').addClass('active');
+    $('body').css('overflow', 'hidden');
+  }
   
 
   // モーダルを閉じる

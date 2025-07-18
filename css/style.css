@@ -880,6 +880,20 @@ body {
   background: rgba(0, 0, 0, 0.7);
 }
 
+/* 高精度ポインタ（マウス／トラックパッド／PC）では常に表示 */
+@media (pointer: fine) {
+  .carousel-arrow {
+    display: block;
+  }
+}
+
+/* 粗いポインタ（タッチ）では非表示のまま */
+@media (pointer: coarse) {
+  .carousel-arrow {
+    display: none;
+  }
+}
+
 /* Footer */
 .footer {
   background-color: white;
@@ -1019,6 +1033,70 @@ body {
 
 .artist-info p {
   margin-bottom: 20px;
+}
+
+/* Art modal */
+.art-modal {
+  background-image: url('../images/tesainsuhesu-zhitekusucha-bei-jing.webp');
+}
+
+/* モーダルコンテンツの大きさ＆中央寄せ・背景白など */
+.art-modal-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+
+/* 画像表示エリア */
+.art-modal-image {
+  position: relative;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  flex: 1 1 auto;
+  max-height: 80vh; /* タイトルぶん余白残し */
+  object-fit: contain;
+}
+
+.art-modal-close {
+  top: 0px;
+  right: 15px;
+  font-size: 25px;
+}
+
+/* 画像：containで拡大しすぎず最大表示・全体見える */
+.art-modal-img {
+  display: block;
+  max-width: 90vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* タイトルは画像の下で横中央＆折り返し */
+.art-modal-title {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: bold;
+  color: #222;
+  margin: 0;
+  overflow-wrap: break-word;
+  max-height: 16vh; /* タイトルが多すぎてもスクロール */
+  overflow-y: auto;
+  padding: 4px 0 0 0;
+  background: none;
 }
 
 /* Store Page */
@@ -1843,10 +1921,6 @@ body {
   .view-artist-btn {
     font-size: 16px;
     padding: 0.5em 1em;
-  }
-
-  .carousel-arrow {
-    display: block;
   }
 
   .modal-content {
