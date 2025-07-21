@@ -500,6 +500,8 @@ story of cheesecakeはこちら
   let isArtistButtonTapped = false;
   let touchArtStartX = 0;
   let touchArtEndX = 0;
+  let touchArtStartY = 0;
+  let touchArtEndY = 0;
   let carouselOffsetLeft = 0;
   let carouselWidth = 0;
 
@@ -512,15 +514,19 @@ story of cheesecakeはこちら
 
     const touch = e.originalEvent.touches[0];
     touchArtStartX = touch.clientX;
-    touchArtEndX = touchArtStartX
+    touchArtEndX = touchArtStartX;
+    touchArtStartY = touch.clientY;
+    touchArtEndY = touchArtStartY;
     carouselOffsetLeft = $(".gallery-carousel-wrapper").offset().left;
     carouselWidth = $(".gallery-carousel-wrapper").width();
   });
 
   $wrapper.on("touchmove", function (e) {
     if (isArtistButtonTapped) return;
+
     const touch = e.originalEvent.touches[0];
     touchArtEndX = touch.clientX;
+    touchArtEndY = touch.clientY;
   });
 
   $wrapper.on("touchend", function () {
@@ -530,28 +536,29 @@ story of cheesecakeはこちら
     }
 
     const swipeThreshold = 70;
-    const diff = touchArtStartX - touchArtEndX;
+    const tapThresholdY = 10;
 
-    if (Math.abs(diff) > swipeThreshold) {
-      // スワイプ操作
-      if (diff > 0) {
+    const diffX = touchArtStartX - touchArtEndX;
+    const diffY = touchArtStartY - touchArtEndY;
+
+    if (Math.abs(diffX) > swipeThreshold) {
+      // 横スワイプ
+      if (diffX > 0) {
         $('.carousel-arrow.next').click();
       } else {
         $('.carousel-arrow.prev').click();
       }
-    } else {
-      // タップ操作（スワイプ距離が小さいとき）
+    } else if (Math.abs(diffY) < tapThresholdY) {
+      // 縦の移動が小さいときだけタップとして扱う
       const tapX = touchArtEndX || touchArtStartX;
       const tapPosition = tapX - carouselOffsetLeft;
 
-      // 今のactive画像の位置・幅を取得
       const $activeImg = $('.gallery-slide.active img');
       if ($activeImg.length) {
         const imgOffset = $activeImg.offset();
-        const imgLeft = imgOffset.left - carouselOffsetLeft; // wrapper基準のleft
+        const imgLeft = imgOffset.left - carouselOffsetLeft;
         const imgRight = imgLeft + $activeImg.outerWidth();
 
-        // タップ位置が画像内ならモーダル表示
         if (tapPosition >= imgLeft && tapPosition <= imgRight) {
           const src = $activeImg.attr('src');
           const alt = $activeImg.attr('alt');
@@ -560,11 +567,9 @@ story of cheesecakeはこちら
           showArtModal(src, alt, title);
           return;
         } else if (tapPosition < imgLeft) {
-          // 画像の左側余白なら「前へ」
           $('.carousel-arrow.prev').click();
           return;
         } else if (tapPosition > imgRight) {
-          // 画像の右側余白なら「次へ」
           $('.carousel-arrow.next').click();
           return;
         }
