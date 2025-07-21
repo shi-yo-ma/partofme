@@ -1054,7 +1054,7 @@ body {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 /* 画像表示エリア */
@@ -1065,13 +1065,11 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 16px;
-  flex: 1 1 auto;
   max-height: 80vh; /* タイトルぶん余白残し */
-  object-fit: contain;
 }
 
 .art-modal-close {
-  top: 0px;
+  top: -60px;
   right: 0px;
   font-size: 25px;
 }
@@ -1933,10 +1931,6 @@ body {
 
   .modal-close {
     font-size: 30px;
-  }
-
-  .art-modal-close {
-    right: 15px;
   }
 
   .artist-modal-body {
