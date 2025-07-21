@@ -1054,7 +1054,6 @@ body {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding-top: 40px;
 }
 
 /* 画像表示エリア */
@@ -2184,6 +2183,10 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     flex-grow: 1;
+  }
+
+  .art-modal-content {
+    padding-top: 40px;
   }
 
   .store-intro {
