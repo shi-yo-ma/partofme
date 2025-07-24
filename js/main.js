@@ -535,7 +535,7 @@ story of cheesecakeはこちら
       return;
     }
 
-    const swipeThreshold = 70;
+    const swipeThreshold = 50;
     const tapThresholdY = 10;
 
     const diffX = touchArtStartX - touchArtEndX;
